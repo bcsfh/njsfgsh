@@ -3125,8 +3125,33 @@ CompleteInteractiontRemote:FireServer(c:FindFirstChild("Part"):FindFirstChild("P
 end
 end
 elseif c.Name == "Lanyard" and c:FindFirstChild("Handle") then
-if not c.Parent:FindFirstChild("Highlight") then
-local highlight = Instance.new("Highlight",c.Parent)
+if not c:FindFirstChild("tracker") then
+local bb = Instance.new("BillboardGui",c)
+bb.Adornee = c
+bb.ExtentsOffset = Vector3.new(0,1,0)
+bb.AlwaysOnTop = true
+bb.Size = UDim2.new(0,5,0,5)
+bb.StudsOffset = Vector3.new(0,1,0)
+bb.Name = "tracker"
+local frame = Instance.new("Frame",bb)
+frame.ZIndex = 10
+frame.BackgroundTransparency = 0.3
+frame.Size = UDim2.new(1,0,1,0)
+frame.Position = UDim2.new(0,0,0)
+frame.Transparency = 0
+local txtlbl = Instance.new("TextLabel",bb)
+txtlbl.ZIndex = 10
+txtlbl.Text = "Keycard"
+txtlbl.BackgroundTransparency = 1
+txtlbl.Position = UDim2.new(0,0,0,-35)
+txtlbl.Size = UDim2.new(1,0,10,0)
+txtlbl.TextColor3 = Color3.new(1,1,1)
+txtlbl.Font = "SourceSansBold"
+txtlbl.FontSize = "Size10"
+txtlbl.TextStrokeTransparency = 0.5
+end
+if not c:FindFirstChild("Highlight") then
+local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
 highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
