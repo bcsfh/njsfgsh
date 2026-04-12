@@ -2435,7 +2435,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 2.5
+local Time = tick() + 1.5
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2479,7 +2479,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 2.5
+local Time = tick() + 1.5
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2523,7 +2523,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 3
+local Time = tick() + 1.5
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2567,7 +2567,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 3
+local Time = tick() + 1.5
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2602,7 +2602,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Main").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + 1
 repeat
 if c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt"))
