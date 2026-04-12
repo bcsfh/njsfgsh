@@ -84,6 +84,9 @@ request(abcdef)
 if whitelisted == "No" then
 game.Players.LocalPlayer:Kick("Not whitelisted")
 end
+if _G.PASSCODE ~= "123" then
+game.Players.LocalPlayer:Kick("Incorrect Passcode")
+end
 if _G.CheatOn == true and _G.PASSCODE == "123" and string.match(game.GameId, "16680835") and not string.match(game.PlaceId, "21532277") and not game.CoreGui.RobloxGui:FindFirstChild("Bragoriety") and whitelisted == "Yes" then
 local player = game.Players.LocalPlayer
 local u = game:GetService("UserInputService")
