@@ -2755,7 +2755,7 @@ c:FindFirstChild("tracker"):Destroy()
 end
 table.remove(objectstable,op)
 end
-elseif c.Name == "UseUSBComputer" and c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") and hasUSB == true and c:FindFirstChild("Highlight_[]") or c.Name == "UseUSBComputer" and c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") and hasUSB == true and c:FindFirstChild("HIGHLIGHT___") then
+elseif c.Name == "UseUSBComputer" and c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") and hasUSB == true and c:FindFirstChild("Highlight_[]") or c.Name == "UseUSBComputer" and c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") and hasUSB == true and c:FindFirstChild("HIGHLIGHT___") or c.Name == "UseUSBComputer" and c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") and hasUSB == true and c:FindFirstChild("Highlight") then
 if not c:FindFirstChild("Highlight") then
 local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
