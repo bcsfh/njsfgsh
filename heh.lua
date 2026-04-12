@@ -1524,7 +1524,7 @@ end
 end
 
 for _,labelbags in pairs(BagsFolder:GetChildren())do
-if labelbags.Name ~= "DeadBody" then
+if labelbags.Name ~= "DeadBody" and labelbags.Name ~= "KEEPER" and labelbags.Name ~= "Highlight" then
 if not labelbags:FindFirstChild("tracker") then
 local bb = Instance.new("BillboardGui",labelbags)
 bb.Adornee = labelbags
