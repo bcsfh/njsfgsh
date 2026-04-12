@@ -837,6 +837,7 @@ local knownloots = {
 "Coke",
 "PaintingTemplate",
 "LootablePainting",
+"LootableMasterpiece",
 "Jewels",
 "Blueprint",
 "ALMOSTCoke",
@@ -2081,7 +2082,24 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + 1
+repeat
+StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
+task.wait()
+until c == nil or colas == nil or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - colas.Position).magnitude > 10
+CompleteInteractiontRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
+end
+end
+elseif c.Name == "LootableMasterpiece" and c:FindFirstChild("Picture") and currentbags <= 1 then
+if not c:FindFirstChild("Highlight") then
+local highlight = Instance.new("Highlight",c)
+highlight.FillTransparency = 1
+highlight.OutlineColor = Color3.fromRGB(255,170,0)
+end
+for _,colas in pairs(c:GetChildren())do
+if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+notify(c.Name)
+local Time = tick() + 1
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2128,7 +2146,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + 1
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2169,7 +2187,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Blueprint") and c:FindFirstChild("Blueprint"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Blueprint").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + 1
 repeat
 if c:FindFirstChild("Blueprint") and c:FindFirstChild("Blueprint"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Blueprint"):FindFirstChild("ProximityPrompt"))
