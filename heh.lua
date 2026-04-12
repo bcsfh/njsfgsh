@@ -816,6 +816,10 @@ elseif objname == "Food" then
 local prefix = "[Auto Eat]: "
 TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(prefix.."NOM NOM NOM!")
 lastnotif = objname
+elseif objname == "PickpocketKeycard" then
+local prefix = "[Auto Pickpocket]: "
+TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(prefix.."Yoinkzerzzz")
+lastnotif = objname
 else
 local prefix = "[Auto Loot]: "
 TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(prefix.."Picking up "..objname.."...")
@@ -933,6 +937,7 @@ local knownloots = {
 "BrickBankVaultDoor",
 "Lanyard",
 "KeyCard",
+"PickpocketKeycard",
 "Key",
 "KeyAccessory",
 "CardReader",
@@ -3472,6 +3477,20 @@ task.wait()
 until c == nil or not c:FindFirstChild("InteractionPart") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("InteractionPart").Position).magnitude > 10
 if c:FindFirstChild("InteractionPart") and c:FindFirstChild("InteractionPart"):FindFirstChild("ProximityPrompt") then
 CompleteInteractiontRemote:FireServer(c:FindFirstChild("InteractionPart"):FindFirstChild("ProximityPrompt"))
+end
+end
+elseif c.Name == "PickpocketKeycard" and c:FindFirstChild("Root") and c:FindFirstChild("Root"):FindFirstChild("ProximityPrompt") then
+if c:FindFirstChild("Root") and c:FindFirstChild("Root"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Root").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+notify(c.Name)
+local Time = tick() + .5
+repeat
+if c:FindFirstChild("Root") and c:FindFirstChild("Root"):FindFirstChild("ProximityPrompt") then
+StartInteractRemote:FireServer(c:FindFirstChild("Root"):FindFirstChild("ProximityPrompt"))
+end
+task.wait()
+until c == nil or not c:FindFirstChild("Root") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Root").Position).magnitude > 10
+if c:FindFirstChild("Root") and c:FindFirstChild("Root"):FindFirstChild("ProximityPrompt") then
+CompleteInteractiontRemote:FireServer(c:FindFirstChild("Root"):FindFirstChild("ProximityPrompt"))
 end
 end
 elseif c.Name == "USB" and c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
