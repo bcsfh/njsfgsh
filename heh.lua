@@ -84,6 +84,9 @@ request(abcdef)
 if whitelisted == "No" then
 game.Players.LocalPlayer:Kick("Not whitelisted")
 end
+if not _G.PASSCODE then
+game.Players.LocalPlayer:Kick("Passcode Required")
+end
 if _G.PASSCODE ~= "123" then
 game.Players.LocalPlayer:Kick("Incorrect Passcode")
 end
