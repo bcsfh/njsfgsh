@@ -784,7 +784,7 @@ local lastnotif = "Nothing"
 
 local function notify(objname)
 if lastnotif ~= objname then
-if objname == "RandomCrate" or objname == "RushCrate" or objname == "colorBoxDoor" or objname == "MilitaryCrateUNTIMED" or objname == "MiniSafe" or objname == "DisplayCaseRemoveGlass" or objname == "rfid_faceplate" or objname == "ObjectivePickDoor1" or objname == "ObjectivePickDoor2" or objname == "Cash Register" or objname == "Cash Drawer" or objname == "TransportBoatDoor" or objname == "Folder" or objname == "FUSEBOXDOOR" or objname == "LockedStorageDoor" then
+if objname == "RandomCrate" or objname == "RushCrate" or objname == "colorBoxDoor" or objname == "MilitaryCrateUNTIMED" or objname == "MiniSafe" or objname == "DisplayCaseRemoveGlass" or objname == "rfid_faceplate" or objname == "ObjectivePickDoor1" or objname == "ObjectivePickDoor2" or objname == "Cash Register" or objname == "Cash Drawer" or objname == "TransportBoatDoor" or objname == "Folder" or objname == "FUSEBOXDOOR" or objname == "LockedStorageDoor" or objname == "ArtPowerBox" then
 local prefix = "[Auto Open]: "
 TextChatService.TextChannels.RBXGeneral:DisplaySystemMessage(prefix.."Opening up "..objname.."...")
 lastnotif = objname
@@ -879,6 +879,7 @@ local knownloots = {
 "xTransportBoatSignal",
 "TransportBoatSignal",
 "TransportBoatDoor",
+"ArtPowerBox",
 "pulledSignal",
 "OpenedSafe",
 "OpenedRegister",
@@ -3371,7 +3372,7 @@ if c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker"):Destroy()
 end
 table.remove(objectstable,op)
-elseif c.Name == "CamDisabler" and c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") or c.Name == "TransportBoatSignal" and c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") then
+elseif c.Name == "CamDisabler" and c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") or c.Name == "TransportBoatSignal" and c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") or c.Name == "ArtPowerBox" and c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") then
 if not c:FindFirstChild("tracker") then
 local bb = Instance.new("BillboardGui",c)
 bb.Adornee = c
