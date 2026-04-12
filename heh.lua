@@ -2327,7 +2327,7 @@ c:FindFirstChild("tracker").TextLabel.Text = c.Name
 end
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Lid").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 2
+local Time = tick() + 3
 repeat
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt"))
@@ -2368,7 +2368,7 @@ c:FindFirstChild("tracker").TextLabel.Text = c.Name
 end
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Lid").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 2
+local Time = tick() + 3
 repeat
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt"))
