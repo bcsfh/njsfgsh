@@ -432,7 +432,7 @@ local args = {
 	10000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(100, -100, -100),
+	vector.create(-10, -10, -10),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
