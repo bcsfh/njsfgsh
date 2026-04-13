@@ -424,8 +424,20 @@ while cops == true do
 for _,police in pairs(PoliceFolder:GetChildren())do
 local Humanoid = police:FindFirstChildOfClass("Humanoid")
 local Head = police:FindFirstChild("Head")
-if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
+if Humanoid and Head and player.Backpack:FindFirstChildOfClass("Tool") then
 local args = {
+	player.Backpack:FindFirstChildOfClass("Tool"),
+	Head,
+	false,
+	4200,
+	Head.Position,
+	vector.create(9e999, -9e999, -9e999),
+	4200,
+	"explosion",
+	Head.Position
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("HitObject"):FireServer(unpack(args))
+--[[local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
@@ -435,7 +447,7 @@ local args = {
 	vector.create(-10, -10, -10),
 	{}
 }
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))]]
 end
 end
 task.wait(1)
