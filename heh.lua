@@ -429,10 +429,10 @@ local args = {
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Head,
 	false,
-	12500,
+	4200,
 	Head.Position,
 	vector.create(9e999, -9e999, -9e999),
-	12500,
+	4200,
 	"explosion",
 	Head.Position
 }
