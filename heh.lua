@@ -616,7 +616,7 @@ local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
-	10000,
+	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
 	vector.create(9e999, -9e999, -9e999),
@@ -657,19 +657,17 @@ kag.MouseButton1Down:connect(function()
 local Humanoid = crims:FindFirstChildOfClass("Humanoid")
 local Head = crims:FindFirstChild("Head")
 if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
-for i = 1, 10 do
 local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
-	10000,
+	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(9e999, -9e999, -9e999),
+	vector.create(1, -1, -1),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
 end
 end)
 end
