@@ -438,7 +438,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
 end
 end
-task.wait()
+task.wait(1)
 end
 elseif cops == true then
 cops = false
