@@ -657,19 +657,8 @@ kag.MouseButton1Down:connect(function()
 local Humanoid = crims:FindFirstChildOfClass("Humanoid")
 local Head = crims:FindFirstChild("Head")
 if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
+for i = 1, 10 do
 local args = {
-	player.Backpack:FindFirstChildOfClass("Tool"),
-	Head,
-	false,
-	12500,
-	Head.Position,
-	vector.create(9e999, -9e999, -9e999),
-	12500,
-	"explosion",
-	Head.Position
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("HitObject"):FireServer(unpack(args))
---[[local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
@@ -680,7 +669,8 @@ game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("As
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-]]end
+end
+end
 end)
 end
 elseif frame.Visible == true then
