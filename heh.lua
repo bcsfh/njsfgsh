@@ -2185,10 +2185,6 @@ local args = {
 }
 RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
 elseif not player.Backpack:FindFirstChild("SAW") and not player.Character:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
-
-end
-end
-end
 end
 elseif c.Name == "Jewels" and c:FindFirstChild("Part") and currentbags <= 1 then
 if string.match(game.PlaceId,"121625668096152") or string.match(game.PlaceId,"2088934656") or string.match(game.PlaceId,"86300559848070") then
