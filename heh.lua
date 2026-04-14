@@ -2165,7 +2165,7 @@ local args = {
 	player.Character:FindFirstChild("SAW"),
 	c2,
 	false,
-	[6] = vector.create(55,-9),
+	[6] = vector.create(55,1,-9),
 	[7] = 56
 }
 RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
@@ -2180,10 +2180,13 @@ local args = {
 	player.Backpack:FindFirstChild("SAW"),
 	c2,
 	false,
-	[6] = vector.create(55,-9),
+	[6] = vector.create(55,1,-9),
 	[7] = 56
 }
 RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end 
+end 
+end
 elseif not player.Backpack:FindFirstChild("SAW") and not player.Character:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 end
 elseif c.Name == "Jewels" and c:FindFirstChild("Part") and currentbags <= 1 then
