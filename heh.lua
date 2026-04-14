@@ -3089,8 +3089,8 @@ c:FindFirstChild("Highlight"):Destroy()
 end
 table.remove(objectstable,op)
 elseif c.Name == "RushCrate" and c:FindFirstChild("Spacer") and c:FindFirstChild("Spacer"):FindFirstChild("ProximityPrompt") then
-if not c:FindFirstChild("Spacer"):FindFirstChild("Highlight") then
-local highlight = Instance.new("Highlight",c:FindFirstChild("Spacer"))
+if not c:FindFirstChild("Highlight") then
+local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
 highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
