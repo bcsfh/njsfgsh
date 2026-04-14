@@ -892,6 +892,7 @@ local Enabled;
 local objectstable = {}
 local knownloots = {
 "DepositMoneyStack",
+"DepositMoneyStack_LOCKED",
 "Coke",
 "PaintingTemplate",
 "LootablePainting",
@@ -922,6 +923,7 @@ local knownloots = {
 "BoomedBox",
 "WeaponBagger",
 "GoldBars",
+"GoldBars_LOCKED",
 "Samurai",
 "Artifact",
 "MiniSafe",
@@ -2137,7 +2139,7 @@ if c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker"):Destroy()
 end
 table.remove(objectstable,op)
-elseif c.Name == "LootablePainting" and c:FindFirstChild("Picture") and currentbags <= 1 or c.Name == "LootableMasterpiece" and c:FindFirstChild("Picture") and currentbags <= 1 or c.Name == "LockedPainting" and c:FindFirstChild("Picture") and currentbags <= 1 then
+elseif c.Name == "LootablePainting" and c:FindFirstChild("Picture") and currentbags <= 1 or c.Name == "LootableMasterpiece" and c:FindFirstChild("Picture") and currentbags <= 1 then
 if not c:FindFirstChild("Highlight") then
 local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
@@ -2152,6 +2154,40 @@ StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
 until c == nil or colas == nil or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - colas.Position).magnitude > 10
 CompleteInteractiontRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
+end
+end
+elseif c.Name == "LockedPainting" and c:FindFirstChild("Picture") then
+if player.Character:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
+if c:FindFirstChild("Bars") then
+for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
+local args = {
+	player.Character:FindFirstChild("SAW"),
+	c2,
+	false,
+	[6] = vector.create(55,-9),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
+end
+end
+elseif player.Backpack:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
+if c:FindFirstChild("Bars") then
+for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
+local args = {
+	player.Backpack:FindFirstChild("SAW"),
+	c2,
+	false,
+	[6] = vector.create(55,-9),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+elseif not player.Backpack:FindFirstChild("SAW") and not player.Character:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+
+end
+end
 end
 end
 elseif c.Name == "Jewels" and c:FindFirstChild("Part") and currentbags <= 1 then
