@@ -424,6 +424,19 @@ while cops == true do
 for _,police in pairs(PoliceFolder:GetChildren())do
 local Humanoid = police:FindFirstChildOfClass("Humanoid")
 local Head = police:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") then
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	4200,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(-9e999, -2, -2),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+else
 if Humanoid and Head and player.Backpack:FindFirstChildOfClass("Tool") then
 --[[local args = {
 	player.Backpack:FindFirstChildOfClass("Tool"),
@@ -444,10 +457,11 @@ local args = {
 	4200,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-10, -10, -10),
+	vector.create(-9e999, -2, -2),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
 end
 end
 task.wait(1)
@@ -611,6 +625,19 @@ kags.MouseButton1Down:connect(function()
 for _,civys in pairs(CivilliansFolder:GetChildren())do
 local Humanoid = civys:FindFirstChildOfClass("Humanoid")
 local Head = civys:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") then
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	1000,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(-9e999, -2, -2),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+else
 if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
 local args = {
 	"Damage",
@@ -619,10 +646,11 @@ local args = {
 	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(9e999, -9e999, -9e999),
+	vector.create(-9e999, -2, -2),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
 end
 end
 end)
@@ -656,6 +684,19 @@ end
 kag.MouseButton1Down:connect(function()
 local Humanoid = crims:FindFirstChildOfClass("Humanoid")
 local Head = crims:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") then
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	1000,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(-9e999, -2, -2),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+else
 if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
 local args = {
 	"Damage",
@@ -664,10 +705,11 @@ local args = {
 	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(1, -1, -1),
+	vector.create(-9e999, -2, -2),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
 end
 end)
 end
