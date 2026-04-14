@@ -448,7 +448,8 @@ local args2 = {
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
-elseif Humanoid and Head and not player.Character and player.Backpack:FindFirstChildOfClass("Tool") then
+else
+if Humanoid and Head and player.Backpack:FindFirstChildOfClass("Tool") then
 local args2 = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
@@ -460,6 +461,7 @@ local args2 = {
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
+end
 end
 end
 task.wait(1)
@@ -706,7 +708,8 @@ local args2 = {
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
-elseif Humanoid and Head and not player.Character and player.Backpack:FindFirstChildOfClass("Tool") then
+else
+if Humanoid and Head and player.Backpack:FindFirstChildOfClass("Tool") then
 local args2 = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
@@ -718,6 +721,7 @@ local args2 = {
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
+end
 end
 end)
 end
