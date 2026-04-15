@@ -431,7 +431,7 @@ local args = {
 	false,
 	4200,
 	Head.Position,
-	vector.create(-9999999, 1, -9999999),
+	vector.create(-9e99, 1, -9e99),
 	4200,
 	"explosion",
 	Head.Position
