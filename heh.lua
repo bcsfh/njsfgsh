@@ -503,7 +503,7 @@ throwbags = true
 pgr6.Text = "ThrowBags to Van: ON"
 while throwbags == true do
 for _,c2 in pairs(BagsFolder:GetChildren())do
-if c2.Name == "Bag" and game.Workspace:FindFirstChild("BagSecuredArea") and not game.Workspace:FindFirstChild("CollectionPoints") and not game.Workspace:FindFirstChild("LootBoat") then
+if c2.Name == "Bag" and c2:FindFirstChild("LastHeldBy") and c2:FindFirstChild("LastHeldBy").Value == player.Character and game.Workspace:FindFirstChild("BagSecuredArea") and not game.Workspace:FindFirstChild("CollectionPoints") and not game.Workspace:FindFirstChild("LootBoat") then
 if game.Workspace.Map:FindFirstChild("EventBoxes") and game.Workspace.Map:FindFirstChild("EventBoxes"):FindFirstChild("BagBox") and not game.Workspace.Map:FindFirstChild("EventDoor2") then
 for _,boxes in pairs(game.Workspace.Map:FindFirstChild("EventBoxes"):GetChildren())do
 if c2 ~= nil and c2:FindFirstChildOfClass("UnionOperation") and boxes:FindFirstChild("Hitbox") then
@@ -527,7 +527,7 @@ for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
 end
-elseif c2.Name == "Bag" and game.Workspace:FindFirstChild("CollectionPoints") then
+elseif c2.Name == "Bag" and c2:FindFirstChild("LastHeldBy") and c2:FindFirstChild("LastHeldBy").Value == player.Character and game.Workspace:FindFirstChild("CollectionPoints") then
 if game.Workspace:FindFirstChild("CollectionA") then
 BagRemote:FireServer(c2,true)
 if c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") then
@@ -559,7 +559,7 @@ for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
 end
-elseif c2.Name == "Bag" and game.Workspace:FindFirstChild("LootBoat") then
+elseif c2.Name == "Bag" and c2:FindFirstChild("LastHeldBy") and c2:FindFirstChild("LastHeldBy").Value == player.Character and game.Workspace:FindFirstChild("LootBoat") then
 if game.Workspace.Map:FindFirstChild("CollectionAreas") then
 for coc,collectors in pairs(game.Workspace.Map:FindFirstChild("CollectionAreas"):GetChildren())do
 if collectors:FindFirstChild("Collector") and collectors:FindFirstChild("Depot") and collectors:FindFirstChild("Depot"):FindFirstChild("Highlight_[]") then
