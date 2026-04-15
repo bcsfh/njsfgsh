@@ -431,7 +431,7 @@ local args = {
 	false,
 	4200,
 	Head.Position,
-	vector.create(-9e999, -1.9310566186904907, -10.946337699890137),
+	vector.create(-9999999, -1.9310566186904907, -10.946337699890137),
 	4200,
 	"explosion",
 	Head.Position
@@ -446,7 +446,7 @@ local args2 = {
 	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e999, -1.9310566186904907, -10.946337699890137),
+	vector.create(-9999999, -1.9310566186904907, -10.946337699890137),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
