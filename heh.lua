@@ -804,7 +804,7 @@ for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
 local args = {
 	player.Character:FindFirstChild("SAW"),
 	c2,
-	true,
+	false,
 	[6] = vector.create(55,1,-9),
 	[7] = 56
 }
@@ -852,7 +852,7 @@ for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
 local args = {
 	player.Backpack:FindFirstChild("SAW"),
 	c2,
-	true,
+	false,
 	[6] = vector.create(55,1,-9),
 	[7] = 56
 }
