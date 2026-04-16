@@ -626,6 +626,22 @@ kags.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 kags.TextStrokeTransparency = 0.3
 kags.BorderSizePixel = 1
 kags.BorderColor = BrickColor.new("White")
+kags2 = Instance.new("TextButton")
+kags2.Parent = frame
+kags2.Size = UDim2.new(0.1,0,0.05,0)
+kags2.Position = UDim2.new(0.1,0,0.2,0)
+kags2.Text="Explode All Civs"
+kags2.BackgroundTransparency = 0.3
+kags2.TextColor = BrickColor.new("White")
+kags2.BackgroundColor = BrickColor.new("Really Black")
+kags2.BorderColor = BrickColor.new("Black")
+kags2.Font = "ArialBold"
+kags2.FontSize = "Size14"
+kags2.TextScaled = true
+kags2.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
+kags2.TextStrokeTransparency = 0.3
+kags2.BorderSizePixel = 1
+kags2.BorderColor = BrickColor.new("White")
 kags.MouseButton1Down:connect(function()
 for _,civys in pairs(CivilliansFolder:GetChildren())do
 local Humanoid = civys:FindFirstChildOfClass("Humanoid")
@@ -655,6 +671,41 @@ local args = {
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
+end
+end
+end)
+kags2.MouseButton1Down:connect(function()
+for _,civys in pairs(CivilliansFolder:GetChildren())do
+local Humanoid = civys:FindFirstChildOfClass("Humanoid")
+local Head = civys:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") then
+local args = {
+	player.Character:FindFirstChildOfClass("Tool"),
+	Head,
+	false,
+	4200,
+	Head.Position,
+	vector.create(-9e99, 1, -9e99),
+	4200,
+	"explosion",
+	Head.Position
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("HitObject"):FireServer(unpack(args))
+else
+if Humanoid and Head and player.Backpack:FindFirstChildOfClass("Tool") then
+local args2 = {
+	player.Character:FindFirstChildOfClass("Tool"),
+	Head,
+	false,
+	4200,
+	Head.Position,
+	vector.create(-9e99, 1, -9e99),
+	4200,
+	"explosion",
+	Head.Position
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("HitObject"):FireServer(unpack(args2))
 end
 end
 end
