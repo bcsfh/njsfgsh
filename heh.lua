@@ -3343,6 +3343,26 @@ CompleteInteractiontRemote:FireServer(c:FindFirstChild("InteractPart"):FindFirst
 haskeycard = false
 end
 end
+elseif c.Name == "CardReader" and c:FindFirstChild("Reader") and c:FindFirstChild("Reader"):FindFirstChild("ProximityPrompt") and haskeycard == true then
+if not c:FindFirstChild("Highlight") then
+local highlight = Instance.new("Highlight",c)
+highlight.FillTransparency = 1
+highlight.OutlineColor = Color3.fromRGB(0,255,0)
+end
+if c:FindFirstChild("Reader") and c:FindFirstChild("Reader"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Reader").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+notify(c.Name)
+local Time = tick() + .1
+repeat
+if c:FindFirstChild("Reader") and c:FindFirstChild("Reader"):FindFirstChild("ProximityPrompt") then
+StartInteractRemote:FireServer(c:FindFirstChild("Reader"):FindFirstChild("ProximityPrompt"))
+end
+task.wait()
+until c == nil or not c:FindFirstChild("Reader") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Reader").Position).magnitude > 10
+if c:FindFirstChild("Reader") and c:FindFirstChild("Reader"):FindFirstChild("ProximityPrompt") then
+CompleteInteractiontRemote:FireServer(c:FindFirstChild("Reader"):FindFirstChild("ProximityPrompt"))
+haskeycard = false
+end
+end
 elseif c.Name == "Card Read!" then
 if c:FindFirstChild("Highlight") then
 c:FindFirstChild("Highlight"):Destroy()
