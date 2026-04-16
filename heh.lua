@@ -320,6 +320,22 @@ pgr12.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr12.TextStrokeTransparency = 0.3
 pgr12.BorderSizePixel = 1
 pgr12.BorderColor = BrickColor.new("White")
+pgr13 = Instance.new("TextButton")
+pgr13.Parent = s
+pgr13.Size = UDim2.new(0.1,0,0.05,0)
+pgr13.Position = UDim2.new(0.2,0,0.6,0)
+pgr13.Text="SAW PaintingBars/SafeBoxes (Requires SAW)"
+pgr13.BackgroundTransparency = 0.3
+pgr13.TextColor = BrickColor.new("White")
+pgr13.BackgroundColor = BrickColor.new("Really Black")
+pgr13.BorderColor = BrickColor.new("Black")
+pgr13.Font = "ArialBold"
+pgr13.FontSize = "Size14"
+pgr13.TextScaled = true
+pgr13.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
+pgr13.TextStrokeTransparency = 0.3
+pgr13.BorderSizePixel = 1
+pgr13.BorderColor = BrickColor.new("White")
 creditsTo = Instance.new("TextButton")
 creditsTo.Parent = s
 creditsTo.Size = UDim2.new(0.4,0,0.05,0)
@@ -775,6 +791,108 @@ end
 elseif infammo == true then
 infammo = false
 pgr12.Text = "Inf Ammo: OFF"
+end
+end)
+
+pgr13.MouseButton1Down:connect(function()
+if game.Workspace:FindFirstChild("Map") then
+if player.Character:FindFirstChild("SAW") then
+if game.Workspace.Map:FindFirstChild("AlarmIronBars") then
+for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
+if c:FindFirstChild("Bars") then
+for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
+local args = {
+	player.Character:FindFirstChild("SAW"),
+	c2,
+	true,
+	[6] = vector.create(55,1,-9),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end 
+end 
+end
+end
+for _,c in pairs(game.Workspace.Map:GetChildren())do
+if c.Name == "SafetyBoxesOpenable" then
+for _,c2 in pairs(c:GetChildren())do
+if c2.Name == "LockboxDoor" then
+local args = {
+	player.Character:FindFirstChild("SAW"),
+	c2:FindFirstChild("LockboxDoor"),
+	false,
+	[6] = vector.create(-38.07579803466797, 0.000013351442248676904, -41.063785552978516),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
+end
+elseif c.Name == "DepositBoxHolder" then
+if c:FindFirstChild("Boxes") then
+for _,c2 in pairs(c:FindFirstChild("Boxes"):GetChildren())do
+if c2.Name == "DepositBox" then
+local args = {
+	player.Character:FindFirstChild("SAW"),
+	c2:FindFirstChild("Door"),
+	false,
+	[6] = vector.create(-12.341293334960938, -11.152055740356445, 53.47266387939453),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
+end
+end
+end
+end
+elseif player.Backpack:FindFirstChild("SAW") then
+if game.Workspace.Map:FindFirstChild("AlarmIronBars") then
+for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
+if c:FindFirstChild("Bars") then
+for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
+local args = {
+	player.Backpack:FindFirstChild("SAW"),
+	c2,
+	true,
+	[6] = vector.create(55,1,-9),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end 
+end 
+end
+end
+for _,c in pairs(game.Workspace.Map:GetChildren())do
+if c.Name == "SafetyBoxesOpenable" then
+for _,c2 in pairs(c:GetChildren())do
+if c2.Name == "LockboxDoor" then
+local args = {
+	player.Backpack:FindFirstChild("SAW"),
+	c2:FindFirstChild("LockboxDoor"),
+	false,
+	[6] = vector.create(-38.07579803466797, 0.000013351442248676904, -41.063785552978516),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
+end
+elseif c.Name == "DepositBoxHolder" then
+if c:FindFirstChild("Boxes") then
+for _,c2 in pairs(c:FindFirstChild("Boxes"):GetChildren())do
+if c2.Name == "DepositBox" then
+local args = {
+	player.Backpack:FindFirstChild("SAW"),
+	c2:FindFirstChild("Door"),
+	false,
+	[6] = vector.create(-12.341293334960938, -11.152055740356445, 53.47266387939453),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
+end
+end
+end
+end
+end
 end
 end)
 
@@ -2155,39 +2273,6 @@ task.wait()
 until c == nil or colas == nil or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - colas.Position).magnitude > 10
 CompleteInteractiontRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 end
-end
-elseif c.Name == "LockedPainting" and c:FindFirstChild("Picture") then
-if player.Character:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
-for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
-if c:FindFirstChild("Bars") then
-for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
-local args = {
-	player.Character:FindFirstChild("SAW"),
-	c2,
-	false,
-	[6] = vector.create(55,1,-9),
-	[7] = 56
-}
-RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
-end
-end
-end
-elseif player.Backpack:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
-for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
-if c:FindFirstChild("Bars") then
-for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
-local args = {
-	player.Backpack:FindFirstChild("SAW"),
-	c2,
-	false,
-	[6] = vector.create(55,1,-9),
-	[7] = 56
-}
-RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
-end 
-end 
-end
-elseif not player.Backpack:FindFirstChild("SAW") and not player.Character:FindFirstChild("SAW") and (c:FindFirstChild("Picture").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 end
 elseif c.Name == "Jewels" and c:FindFirstChild("Part") and currentbags <= 1 then
 if string.match(game.PlaceId,"121625668096152") or string.match(game.PlaceId,"2088934656") or string.match(game.PlaceId,"86300559848070") then
