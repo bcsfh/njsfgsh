@@ -324,7 +324,7 @@ pgr13 = Instance.new("TextButton")
 pgr13.Parent = s
 pgr13.Size = UDim2.new(0.1,0,0.05,0)
 pgr13.Position = UDim2.new(0.2,0,0.6,0)
-pgr13.Text="SAW PaintingBars/SafeBoxes (Requires SAW)"
+pgr13.Text="SAW PaintingBars/SafeBoxes (Hold SAW)"
 pgr13.BackgroundTransparency = 0.3
 pgr13.TextColor = BrickColor.new("White")
 pgr13.BackgroundColor = BrickColor.new("Really Black")
@@ -833,54 +833,6 @@ for _,c2 in pairs(c:FindFirstChild("Boxes"):GetChildren())do
 if c2.Name == "DepositBox" then
 local args = {
 	player.Character:FindFirstChild("SAW"),
-	c2:FindFirstChild("Door"),
-	false,
-	[6] = vector.create(-12.341293334960938, -11.152055740356445, 53.47266387939453),
-	[7] = 56
-}
-RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
-end
-end
-end
-end
-end
-elseif player.Backpack:FindFirstChild("SAW") then
-if game.Workspace.Map:FindFirstChild("AlarmIronBars") then
-for _,c in pairs(game.Workspace.Map.AlarmIronBars:GetChildren())do
-if c:FindFirstChild("Bars") then
-for _,c2 in pairs(c:FindFirstChild("Bars"):GetChildren())do
-local args = {
-	player.Backpack:FindFirstChild("SAW"),
-	c2,
-	false,
-	[6] = vector.create(55,1,-9),
-	[7] = 56
-}
-RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
-end 
-end 
-end
-end
-for _,c in pairs(game.Workspace.Map:GetChildren())do
-if c.Name == "SafetyBoxesOpenable" then
-for _,c2 in pairs(c:GetChildren())do
-if c2.Name == "LockboxDoor" then
-local args = {
-	player.Backpack:FindFirstChild("SAW"),
-	c2:FindFirstChild("LockboxDoor"),
-	false,
-	[6] = vector.create(-38.07579803466797, 0.000013351442248676904, -41.063785552978516),
-	[7] = 56
-}
-RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
-end
-end
-elseif c.Name == "DepositBoxHolder" then
-if c:FindFirstChild("Boxes") then
-for _,c2 in pairs(c:FindFirstChild("Boxes"):GetChildren())do
-if c2.Name == "DepositBox" then
-local args = {
-	player.Backpack:FindFirstChild("SAW"),
 	c2:FindFirstChild("Door"),
 	false,
 	[6] = vector.create(-12.341293334960938, -11.152055740356445, 53.47266387939453),
