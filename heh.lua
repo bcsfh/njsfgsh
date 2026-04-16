@@ -638,7 +638,7 @@ local args = {
 	1000,
 	Head,
 	player.Character:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e999, -2, -2),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
@@ -651,7 +651,7 @@ local args = {
 	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e999, -2, -2),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
@@ -696,7 +696,7 @@ local args = {
 	false,
 	4200,
 	Head.Position,
-	vector.create(-9e999, -1.9310566186904907, -10.946337699890137),
+	vector.create(-9e99, 1, -9e99),
 	4200,
 	"explosion",
 	Head.Position
@@ -709,7 +709,7 @@ local args2 = {
 	4200,
 	Head,
 	player.Character:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e999, -1.9310566186904907, -10.946337699890137),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
@@ -722,7 +722,7 @@ local args2 = {
 	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e999, -1.9310566186904907, -10.946337699890137),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args2))
@@ -1282,10 +1282,10 @@ local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
-	10000,
+	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(9e999, -9e999, -9e999),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
@@ -1301,10 +1301,10 @@ local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
-	10000,
+	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(9e999, -9e999, -9e999),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
@@ -1368,10 +1368,10 @@ local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
-	10000,
+	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(9e999, -9e999, -9e999),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
@@ -1386,10 +1386,10 @@ local args = {
 	"Damage",
 	player.Backpack:FindFirstChildOfClass("Tool"),
 	Humanoid,
-	10000,
+	1000,
 	Head,
 	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(9e999, -9e999, -9e999),
+	vector.create(-9e99, 1, -9e99),
 	{}
 }
 game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
