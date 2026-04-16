@@ -1681,6 +1681,7 @@ if labelbags:FindFirstChildOfClass("UnionOperation") and labelbags:FindFirstChil
 CompleteInteractiontRemote:FireServer(labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("ProximityPrompt"))
 end
 end
+end
 if not labelbags:FindFirstChild("tracker") then
 local bb = Instance.new("BillboardGui",labelbags)
 bb.Adornee = labelbags
