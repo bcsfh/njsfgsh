@@ -944,9 +944,9 @@ end
 end)
 
 game:GetService("RunService").Stepped:connect(function()
-if player.Character:FindFirstChildOfClass("Humanoid") and player.Character:FindFirstChild("BaseSpeed") then 
+if player.Character:FindFirstChildOfClass("Humanoid") then 
 if player.Character:FindFirstChild("DownGui") or player.Character:FindFirstChild("DownHighlight") then
-player.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = player.Character:FindFirstChild("BaseSpeed").Value
+player.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = 60
 end
 end
 if noclip == true then
