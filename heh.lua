@@ -893,6 +893,11 @@ end
 end)
 
 game:GetService("RunService").Stepped:connect(function()
+if player.Character:FindFirstChildOfClass("Humanoid") and player.Character:FindFirstChild("BaseSpeed") then 
+if player.Character:FindFirstChild("DownGui") or player.Character:FindFirstChild("DownHighlight") then
+player.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = player.Character:FindFirstChild("BaseSpeed").Value
+end
+end
 if noclip == true then
 for _,c in pairs(player.Character:GetChildren())do
 if c:IsA("BasePart") and not string.match(c.Name,"Right") and not string.match(c.Name,"Left") and not string.match(c.Name,"HumanoidRootPart") then
@@ -1662,6 +1667,20 @@ end
 
 for _,labelbags in pairs(BagsFolder:GetChildren())do
 if labelbags.Name ~= "DeadBody" and labelbags.Name ~= "KEEPER" and labelbags.Name ~= "Highlight" then
+if throwbags == true then
+if labelbags:FindFirstChildOfClass("UnionOperation") and not labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") and labelbags:FindFirstChild("LastHeldBy") and labelbags:FindFirstChild("LastHeldBy").Value ~= player.Character and labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("ProximityPrompt") and (labelbags:FindFirstChildOfClass("UnionOperation").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+notify(labelbags:FindFirstChildOfClass("UnionOperation").Name)
+local Time = tick() + .1
+repeat
+if labelbags:FindFirstChildOfClass("UnionOperation") and labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("ProximityPrompt") then
+StartInteractRemote:FireServer(labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("ProximityPrompt"))
+end
+task.wait()
+until labelbags == nil or not labelbags:FindFirstChildOfClass("UnionOperation") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - labelbags:FindFirstChildOfClass("UnionOperation").Position).magnitude > 10
+if labelbags:FindFirstChildOfClass("UnionOperation") and labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("ProximityPrompt") then
+CompleteInteractiontRemote:FireServer(labelbags:FindFirstChildOfClass("UnionOperation"):FindFirstChild("ProximityPrompt"))
+end
+end
 if not labelbags:FindFirstChild("tracker") then
 local bb = Instance.new("BillboardGui",labelbags)
 bb.Adornee = labelbags
