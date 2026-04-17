@@ -852,7 +852,7 @@ until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Char
 if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
 CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
 end
-RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999)
+RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999))
 end
 end
 task.wait()
