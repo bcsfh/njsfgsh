@@ -388,7 +388,7 @@ gtm = Instance.new("TextButton")
 gtm.Parent = frame2
 gtm.Size = UDim2.new(0.1,0,0.05,0)
 gtm.Position = UDim2.new(0,0,0.05,0)
-gtm.Text="Kill/ThrowBodies: OFF"
+gtm.Text="KillAura&YeetBodies: OFF"
 gtm.BackgroundTransparency = 0.3
 gtm.TextColor = BrickColor.new("White")
 gtm.BackgroundColor = BrickColor.new("Really Black")
@@ -802,7 +802,65 @@ end
 end)
 
 gtm.MouseButton1Down:connect(function()
-RS_Package.Remotes.GoToMenu:FireServer()
+if throwbodies == false and caught == false and game.Workspace:FindFirstChild("Bodies") then
+throwbodies = true
+gtm.Text = "KillAura&YeetBodies: ON"
+while throwbodies == true and caught == false do
+for _,police in pairs(PoliceFolder:GetChildren())do
+local Humanoid = police:FindFirstChildOfClass("Humanoid")
+local Head = police:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") and (Head.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 5 then
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	1000,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(0, 0, 0),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
+end
+for _,civys in pairs(CivilliansFolder:GetChildren())do
+local Humanoid = civys:FindFirstChildOfClass("Humanoid")
+local Head = civys:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") and (Head.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 5 then
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	1000,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(0, 0, 0),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
+end
+for _,c in pairs(game.Workspace:FindFirstChild("Bodies"):GetChildren())do
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") and (c:FindFirstChild("Torso").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+local Time = tick() + .1
+repeat
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
+StartInteractRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
+end
+task.wait()
+until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Torso").Position).magnitude > 10
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
+CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
+end
+RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999)
+end
+end
+task.wait()
+end
+elseif throwbodies == true and caught == false and game.Workspace:FindFirstChild("Bodies") then
+throwbodies = false
+gtm.Text = "KillAura&YeetBodies: OFF"
+end
 end)
 
 pgr9.MouseButton1Down:connect(function()
@@ -1723,6 +1781,14 @@ hasdepotkey = true
 end
 if ment.Name == "Loot Bag" and ment.Value == player then
 currentbags = currentbags+1
+end
+end
+
+if RS_Package:FindFirstChild("ReplicatedGameStatus") then
+if RS_Package:FindFirstChild("ReplicatedGameStatus"):FindFirstChild("Caught") and RS_Package:FindFirstChild("ReplicatedGameStatus"):FindFirstChild("Caught").Value == true then
+caught = true
+throwbodies = false
+gtm.Text = "Loud Triggered"
 end
 end
 
