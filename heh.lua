@@ -1853,6 +1853,17 @@ end
 end
 end
 
+if game.Workspace:FindFirstChild("Bodies") and caught == false then
+for _,bodies in pairs(game.Workspace:FindFirstChild("Bodies"):GetChildren())do
+if not bodies:FindFirstChild("Highlight2") then
+local highlight = Instance.new("Highlight",bodies)
+highlight.Name = "Highlight2"
+highlight.FillTransparency = 0.75
+highlight.OutlineColor = Color3.fromRGB(255,0,0)
+end
+end
+end
+			
 if game.Workspace:FindFirstChild("BagSecuredArea") then
 for _,labelbags2 in pairs(game.Workspace.BagSecuredArea:GetChildren())do
 if labelbags2:FindFirstChild("tracker") then
