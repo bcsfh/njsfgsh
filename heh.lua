@@ -123,6 +123,7 @@ local civs = false
 local infammo = false
 local noclip = false
 local throwbags = false
+local throwbodies = false
 local caught = false
 local checkingforloot = true
 local currentbags = 0
@@ -324,7 +325,7 @@ pgr13 = Instance.new("TextButton")
 pgr13.Parent = s
 pgr13.Size = UDim2.new(0.1,0,0.05,0)
 pgr13.Position = UDim2.new(0.2,0,0.6,0)
-pgr13.Text="SAW PaintingBars/SafeBoxes (Hold SAW)"
+pgr13.Text="SAW PaintingBars/SafeBoxes/ATMs (Hold SAW)"
 pgr13.BackgroundTransparency = 0.3
 pgr13.TextColor = BrickColor.new("White")
 pgr13.BackgroundColor = BrickColor.new("Really Black")
@@ -387,7 +388,7 @@ gtm = Instance.new("TextButton")
 gtm.Parent = frame2
 gtm.Size = UDim2.new(0.1,0,0.05,0)
 gtm.Position = UDim2.new(0,0,0.05,0)
-gtm.Text="GoToMenu"
+gtm.Text="Kill/ThrowBodies: OFF"
 gtm.BackgroundTransparency = 0.3
 gtm.TextColor = BrickColor.new("White")
 gtm.BackgroundColor = BrickColor.new("Really Black")
@@ -876,6 +877,21 @@ local args = {
 	[7] = 56
 }
 RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
+end
+elseif c.Name == "Atm" then
+if c:FindFirstChild("Ints") then
+for _,c2 in pairs(c:FindFirstChild("Ints"):GetChildren())do
+if c2.Name == "SawInt" then
+local args = {
+	player.Character:FindFirstChild("SAW"),
+	c2,
+	false,
+	[6] = vector.create(-38.07579803466797, 0.000013351442248676904, -41.063785552978516),
+	[7] = 56
+}
+RS_Package.Assets.Remotes.HitObject:FireServer(unpack(args))
+end
 end
 end
 elseif c.Name == "DepositBoxHolder" then
