@@ -1421,7 +1421,7 @@ repeat
 task.wait()
 for _,c in pairs(game.Workspace:GetChildren())do
 if c.Name == "colorBoxRNG" and game.Workspace.HighlightObjectives:FindFirstChild("RenovationArea") and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(game.Workspace.HighlightObjectives.RenovationArea.CFrame)
+player.Character:PivotTo(CFrame.new(417.872925,58.1,-368.49))
 task.wait(.25)
 player.Character:PivotTo(c.serial.CFrame)
 task.wait(.25)
