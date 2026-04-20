@@ -1397,7 +1397,7 @@ table.insert(trophytable,giggity)
 end
 end
 
-wait(2)
+wait(10)
 
 while task.wait() do
 
