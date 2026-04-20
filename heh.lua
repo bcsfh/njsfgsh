@@ -529,7 +529,7 @@ if c2 ~= nil and c2:FindFirstChildOfClass("UnionOperation") and c2:FindFirstChil
 c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld"):Destroy()
 ThrowBagRemote:FireServer(Vector3.new(0,0,0))
 end
-c2:FindFirstChildOfClass("UnionOperation").CFrame = boxes:FindFirstChild("Hitbox").CFrame*CFrame.Angles(math.random(-90,90),math.random(-90,90),math.random(-90,90))
+c2:PivotTo(boxes:FindFirstChild("Hitbox").CFrame*CFrame.Angles(math.random(-90,90),math.random(-90,90),math.random(-90,90)))
 task.wait(0.1)
 end
 end
@@ -539,7 +539,7 @@ if c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") then
 c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld"):Destroy()
 ThrowBagRemote:FireServer(Vector3.new(0,0,0))
 end
-c2:FindFirstChildOfClass("UnionOperation").CFrame = game.Workspace.BagSecuredArea.FloorPart.CFrame
+c2:PivotTo(game.Workspace.BagSecuredArea.FloorPart.CFrame)
 for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
@@ -551,7 +551,7 @@ if c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") then
 c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld"):Destroy()
 ThrowBagRemote:FireServer(Vector3.new(0,0,0))
 end
-c2:FindFirstChildOfClass("UnionOperation").CFrame = game.Workspace:FindFirstChild("CollectionA").Pad.CFrame
+c2:PivotTo(game.Workspace:FindFirstChild("CollectionA").Pad.CFrame)
 for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
@@ -561,7 +561,7 @@ if c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") then
 c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld"):Destroy()
 ThrowBagRemote:FireServer(Vector3.new(0,0,0))
 end
-c2:FindFirstChildOfClass("UnionOperation").CFrame = game.Workspace:FindFirstChild("ColectionB").Pad.CFrame
+c2:PivotTo(game.Workspace:FindFirstChild("ColectionB").Pad.CFrame)
 for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
@@ -571,7 +571,7 @@ if c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") then
 c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld"):Destroy()
 ThrowBagRemote:FireServer(Vector3.new(0,0,0))
 end
-c2:FindFirstChildOfClass("UnionOperation").CFrame = game.Workspace:FindFirstChild("CollectionC").Pad.CFrame
+c2:PivotTo(game.Workspace:FindFirstChild("CollectionC").Pad.CFrame)
 for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
@@ -585,7 +585,7 @@ if c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld") then
 c2:FindFirstChildOfClass("UnionOperation"):FindFirstChild("BagWeld"):Destroy()
 ThrowBagRemote:FireServer(Vector3.new(0,0,0))
 end
-c2:FindFirstChildOfClass("UnionOperation").CFrame = collectors:FindFirstChild("Collector").CFrame
+c2:PivotTo(collectors:FindFirstChild("Collector").CFrame)
 for i = 0,5 do
 BagSecuredRemote:FireServer(500000.00000000001,99999,false)
 end
@@ -594,7 +594,7 @@ end
 end
 end
 end
-task.wait(0.1)
+task.wait()
 end
 elseif throwbags == true then
 throwbags = false
