@@ -4155,7 +4155,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("loot") and c:FindFirstChild("loot"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("loot").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + .5
 repeat
 if c:FindFirstChild("loot") and c:FindFirstChild("loot"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("loot"):FindFirstChild("ProximityPrompt"))
@@ -4174,7 +4174,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("InteractPart") and c:FindFirstChild("InteractPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("InteractPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + .5
 repeat
 if c:FindFirstChild("InteractPart") and c:FindFirstChild("InteractPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("InteractPart"):FindFirstChild("ProximityPrompt"))
@@ -4190,7 +4190,7 @@ if c:FindFirstChild("Highlight") then
 c:FindFirstChild("Highlight"):Destroy()
 end
 table.remove(objectstable,op)
-elseif c.Name == "ArtObject" and c:FindFirstChild("Union") then
+elseif c.Name == "ArtObject" and c:FindFirstChild("Base") then
 if not c:FindFirstChild("Highlight") then
 local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
@@ -4199,7 +4199,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + .5
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
