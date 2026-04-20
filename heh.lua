@@ -805,42 +805,6 @@ gtm.MouseButton1Down:connect(function()
 if throwbodies == false and caught == false and game.Workspace:FindFirstChild("Bodies") then
 throwbodies = true
 gtm.Text = "YeetBodies: ON"
-while throwbodies == true and caught == false do
-task.wait()
-for _,civys in pairs(CivilliansFolder:GetChildren())do
-local Humanoid = civys:FindFirstChildOfClass("Humanoid")
-local Head = civys:FindFirstChild("Head")
-if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") and (Head.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 5 then
-local args = {
-	"Damage",
-	player.Character:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Character:FindFirstChildOfClass("Tool").Name,
-	vector.create(0, 0, 0),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
-end
-for _,c in pairs(game.Workspace:FindFirstChild("Bodies"):GetChildren())do
-if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") and (c:FindFirstChild("Torso").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
-local Time = tick() + .1
-repeat
-if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
-StartInteractRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
-end
-task.wait()
-until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Torso").Position).magnitude > 10
-if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
-CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
-end
-task.wait(1)
-RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999))
-end
-end
-end
 elseif throwbodies == true and caught == false and game.Workspace:FindFirstChild("Bodies") then
 throwbodies = false
 gtm.Text = "YeetBodies: OFF"
@@ -1397,7 +1361,7 @@ table.insert(trophytable,giggity)
 end
 end
 
-wait(10)
+wait(2)
 
 while task.wait() do
 
@@ -1407,6 +1371,7 @@ elseif player.Character and player.Character.Health.Value <= 0 then
 game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
 end
 
+throwbodies = true
 noclip = true
 player.Character.HumanoidRootPart.Anchored = false
 game.Workspace.Gravity = 0
@@ -1427,38 +1392,9 @@ for _,civys in pairs(CivilliansFolder:GetChildren())do
 if civys.Type.Value == "Ozela Manager" then
 local Humanoid = civys:FindFirstChildOfClass("Humanoid")
 local Head = civys:FindFirstChild("Head")
-if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool")  then
+if Humanoid and Head and player.Character then
 player.Character.HumanoidRootPart.CFrame = Head.CFrame
-task.wait()
-local args = {
-	"Damage",
-	player.Character:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Character:FindFirstChildOfClass("Tool").Name,
-	vector.create(0, 0, 0),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
 end
-end
-end
-task.wait()
-for _,c in pairs(game.Workspace:FindFirstChild("Bodies"):GetChildren())do
-if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") and (c:FindFirstChild("Torso").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
-local Time = tick() + .1
-repeat
-if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
-StartInteractRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
-end
-task.wait()
-until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Torso").Position).magnitude > 10
-if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
-CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
-end
-task.wait(1)
-RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999))
 end
 end
 until nil or not game.Workspace.Bodies.DeadBody:FindFirstChild("Torso")
@@ -1708,6 +1644,42 @@ local highlight = Instance.new("Highlight",bodies)
 highlight.Name = "Highlight2"
 highlight.FillTransparency = 0.75
 highlight.OutlineColor = Color3.fromRGB(255,0,0)
+end
+end
+end
+
+if throwbodies == true and caught == false and game.Workspace:FindFirstChild("Bodies") then
+for _,civys in pairs(CivilliansFolder:GetChildren())do
+local Humanoid = civys:FindFirstChildOfClass("Humanoid")
+local Head = civys:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") and (Head.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 5 then
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	1000,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(0, 0, 0),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
+end
+for _,c in pairs(game.Workspace:FindFirstChild("Bodies"):GetChildren())do
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") and (c:FindFirstChild("Torso").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+local Time = tick() + .1
+repeat
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
+StartInteractRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
+end
+task.wait()
+until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Torso").Position).magnitude > 10
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
+CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
+end
+task.wait(1)
+RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999))
 end
 end
 end
