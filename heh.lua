@@ -1408,8 +1408,8 @@ end
 end
 repeat
 task.wait()
-if game.Workspace.Map:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("USB"):FindFirstChild("HitBox") then
-player.Character.HumanoidRootPart.CFrame = game.Workspace.Map:FindFirstChild("USB"):FindFirstChild("HitBox").CFrame
+if game.Workspace.Map:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("USB"):FindFirstChild("Hitbox") then
+player.Character.HumanoidRootPart.CFrame = game.Workspace.Map:FindFirstChild("USB"):FindFirstChild("Hitbox").CFrame
 end
 until nil or not game.Workspace.Map:FindFirstChild("USB")
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("KeyCard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
