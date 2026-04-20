@@ -4190,7 +4190,7 @@ if c:FindFirstChild("Highlight") then
 c:FindFirstChild("Highlight"):Destroy()
 end
 table.remove(objectstable,op)
-elseif c.Name == "ArtObject" and c:FindFirstChild("Base") then
+elseif c.Name == "ArtObject" and c:FindFirstChild("Base") or c.Name == "ArtObject" and c:FindFirstChild("Union") then
 if not c:FindFirstChild("Highlight") then
 local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
