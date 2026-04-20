@@ -3131,7 +3131,7 @@ CompleteInteractiontRemote:FireServer(c:FindFirstChild("Spacer"):FindFirstChild(
 end
 wait(0.2)
 end
-elseif c.Name == "KickDoor" and c:FindFirstChild("MainPart2") and c:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") and c.Parent.Name ~= "OpenDoor" then
+elseif c.Name == "KickDoor" and c:FindFirstChild("MainPart2") and c:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") and c.Parent.Name ~= "OpenDoor" and not string.match(game.PlaceId, "6537140247") then
 if c:FindFirstChild("MainPart2") and c:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("MainPart2").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
 local Time = tick() + .1
