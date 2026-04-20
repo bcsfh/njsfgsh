@@ -1458,11 +1458,11 @@ player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Ropes:FindFirst
 elseif game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door"):FindFirstChild("Highlight_[]") or game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Rope") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Hook") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack"):FindFirstChild("Highlight_[]") or game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("OpenDoor") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(2,-1,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(3,-3,0))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(2,-1,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(3,-3,0))
 notify("StadiumHackLaptop")
-local Time = tick() + 3.25
+local Time = tick() + 2.25
 repeat
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard:FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
