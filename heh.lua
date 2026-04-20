@@ -1343,8 +1343,6 @@ end
 
 repeat task.wait() until game.Workspace.Criminals:FindFirstChildOfClass("Model")
 
-wait(2)
-
 if game.Workspace.Criminals:FindFirstChildOfClass("Model") and player.Character:FindFirstChild("Mask") then
 VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.G, false, game)
 end
@@ -1364,8 +1362,6 @@ if giggity.Name == "TrophyLoot_" and giggity:IsDescendantOf(game.Workspace.Map.E
 table.insert(trophytable,giggity)
 end
 end
-
-wait(2)
 
 while task.wait() do
 
