@@ -1436,9 +1436,9 @@ player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_s
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("UseUSBComputer") and game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard").CFrame
 elseif not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game.Workspace:FindFirstChild("UsedUSBComputer") and game.Workspace:FindFirstChild("prop_stadium_storageKeypad") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_storageKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,5)
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_storageKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,3)
 elseif not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game.Workspace:FindFirstChild("UsedUSBComputer") and game.Workspace:FindFirstChild("KeycardKeypad") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("KeycardKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,5)
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("KeycardKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,3)
 elseif game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Used.Value == false and game.Workspace:FindFirstChild("_") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.CFrame
 elseif game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook") then
@@ -3040,7 +3040,7 @@ local highlight = Instance.new("Highlight",c)
 highlight.FillTransparency = 1
 highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
-if c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Main").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+if c:FindFirstChild("Main") and c:FindFirstChild("Main"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Main").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 5 then
 notify(c.Name)
 local Time = tick() + .01
 repeat
