@@ -1376,6 +1376,12 @@ noclip = true
 player.Character.HumanoidRootPart.Anchored = false
 game.Workspace.Gravity = 0
 
+for _,bump in pairs(PoliceFolder:GetChildren())do
+if bump:FindFirstChild("HumanoidRootPart") and bump:FindFirstChild("HumanoidRootPart"):FindFirstChildOfClass("TouchTransmitter") then
+bump:FindFirstChild("HumanoidRootPart"):FindFirstChildOfClass("TouchTransmitter"):Destroy()
+end
+end
+
 if #trophytable >= 1 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") then
 for pussy,penises in pairs(trophytable) do
 if penises.Name == "TrophyLoot" and penises:FindFirstChild("loot") or penises.Name == "TrophyLoot_" and penises:FindFirstChild("loot") then
@@ -3008,7 +3014,7 @@ if c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirst
 notify(c.Name)
 local Time = tick() + .5
 repeat
-if string.match(game.PlaceId, "6537140247") then
+if string.match(game.PlaceId, "6537140247") and not string.match(game.Workspace:FindFirstChild("UsedUSBComputer").Screen.SurfaceGui.TextLabel.Text, "Locked") then
 RS_Package.Remotes.UseKeypad:FireServer(game.Workspace:FindFirstChild("UsedUSBComputer").Screen.SurfaceGui.TextLabel.Text)
 end
 task.wait()
