@@ -388,7 +388,7 @@ gtm = Instance.new("TextButton")
 gtm.Parent = frame2
 gtm.Size = UDim2.new(0.1,0,0.05,0)
 gtm.Position = UDim2.new(0,0,0.05,0)
-gtm.Text="KillAura&YeetBodies: OFF"
+gtm.Text="YeetBodies: OFF"
 gtm.BackgroundTransparency = 0.3
 gtm.TextColor = BrickColor.new("White")
 gtm.BackgroundColor = BrickColor.new("Really Black")
@@ -804,25 +804,9 @@ end)
 gtm.MouseButton1Down:connect(function()
 if throwbodies == false and caught == false and game.Workspace:FindFirstChild("Bodies") then
 throwbodies = true
-gtm.Text = "KillAura&YeetBodies: ON"
+gtm.Text = "YeetBodies: ON"
 while throwbodies == true and caught == false do
-for _,police in pairs(PoliceFolder:GetChildren())do
-local Humanoid = police:FindFirstChildOfClass("Humanoid")
-local Head = police:FindFirstChild("Head")
-if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool") and (Head.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 5 then
-local args = {
-	"Damage",
-	player.Character:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Character:FindFirstChildOfClass("Tool").Name,
-	vector.create(0, 0, 0),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
-end
+task.wait()
 for _,civys in pairs(CivilliansFolder:GetChildren())do
 local Humanoid = civys:FindFirstChildOfClass("Humanoid")
 local Head = civys:FindFirstChild("Head")
@@ -852,15 +836,14 @@ until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Char
 if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
 CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
 end
-task.wait()
+task.wait(1)
 RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999))
 end
 end
-task.wait()
 end
 elseif throwbodies == true and caught == false and game.Workspace:FindFirstChild("Bodies") then
 throwbodies = false
-gtm.Text = "KillAura&YeetBodies: OFF"
+gtm.Text = "YeetBodies: OFF"
 end
 end)
 
@@ -1400,62 +1383,7 @@ wait(2)
 
 for _,lol in pairs(game.Workspace.Criminals:GetChildren())do
 if string.match(lol.Name, "AI") then
-lol.NAMETAG.TextLabel.Text = "Random spinjutsu ass weeeeeeeee"
-end
-end
-
-repeat
-for _,police in pairs(CivilliansFolder:GetChildren())do
-local Humanoid = police:FindFirstChildOfClass("Humanoid")
-local Head = police:FindFirstChild("Head")
-if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
-local args = {
-	"Damage",
-	player.Backpack:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e99, 1, -9e99),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
-wait(.05)
-end
-
-for _,police in pairs(PoliceFolder:GetChildren())do
-local Humanoid = police:FindFirstChildOfClass("Humanoid")
-local Head = police:FindFirstChild("Head")
-if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
-local args = {
-	"Damage",
-	player.Backpack:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e99, 1, -9e99),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
-wait(.05)
-end
-task.wait() 
-until not PoliceFolder:FindFirstChildOfClass("Model") and not CivilliansFolder:FindFirstChildOfClass("Model") 
-
-for _,cameras in CameraFolder:GetChildren() do
-if cameras:FindFirstChild("Union") then
-local args = {
-player.Backpack:FindFirstChildOfClass("Tool"),
-cameras:FindFirstChild("Union"),
-false,
-[6] = vector.create(1.0651851892471313, 2.8431220054626465, 4.272229194641113),
-[7] = 9e999,
-[9] = vector.create(137.39942932128906, 32.951446533203125, -41.06026077270508)
-}
-HitObjectRemote:FireServer(unpack(args))
+lol.NAMETAG.TextLabel.Text = "mhmhmmm this guyyyy :3"
 end
 end
 
@@ -1466,16 +1394,6 @@ end
 end
 
 wait(2)
-
-local p=Instance.new("Part",workspace)
-p.Name="FlameEm"
-p.TopSurface=0
-p.BottomSurface=0
-p.BrickColor=BrickColor.random()
-p.Anchored=true
-p.CanCollide=true
-p.Size=Vector3.new(50,3,50)
-p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0)
 
 while task.wait() do
 
@@ -1491,107 +1409,75 @@ end
 
 noclip = true
 
-for _,police in pairs(PoliceFolder:GetChildren())do
-local Humanoid = police:FindFirstChildOfClass("Humanoid")
-local Head = police:FindFirstChild("Head")
-if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
-local args = {
-	"Damage",
-	player.Backpack:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e99, 1, -9e99),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
-end
-
-for _,police in pairs(CivilliansFolder:GetChildren())do
-local Humanoid = police:FindFirstChildOfClass("Humanoid")
-local Head = police:FindFirstChild("Head")
-if Humanoid and player.Backpack:FindFirstChildOfClass("Tool") then
-local args = {
-	"Damage",
-	player.Backpack:FindFirstChildOfClass("Tool"),
-	Humanoid,
-	1000,
-	Head,
-	player.Backpack:FindFirstChildOfClass("Tool").Name,
-	vector.create(-9e99, 1, -9e99),
-	{}
-}
-game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
-end
-end
-
 game.Workspace.Gravity = 10
 
 if #trophytable >= 1 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") then
 for pussy,penises in pairs(trophytable) do
 if penises.Name == "TrophyLoot" and penises:FindFirstChild("loot") or penises.Name == "TrophyLoot_" and penises:FindFirstChild("loot") then
-local tweenInfo = TweenInfo.new((penises:FindFirstChild("loot").CFrame.Position+Vector3.new(0,-2.5,0) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = penises:FindFirstChild("loot").CFrame*CFrame.new(0,-2.5,0)}):Play()
-repeat p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0)  task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or penises == nil or not penises:FindFirstChild("loot") or (penises:FindFirstChild("loot").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(2)
+player.Character.HumanoidRootPart.CFrame = penises:FindFirstChild("loot").CFrame*CFrame.new(0,-2.5,0)
 elseif penises == nil or penises.Parent == nil then
 table.remove(trophytable,pussy)
 end
 end
 end
 
-if not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("USB") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") then
-local tweenInfo = TweenInfo.new((game.Workspace.Map:FindFirstChild("USB").Hitbox.Position+Vector3.new(0,-5,0) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.Map:FindFirstChild("USB").Hitbox.CFrame*CFrame.new(0,-5,0)}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.Map:FindFirstChild("USB") or (game.Workspace.Map:FindFirstChild("USB").Hitbox.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+if not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") then
+for _,civys in pairs(CivilliansFolder:GetChildren())do
+if civys.Type.Value == "Ozela Manager" then
+local Humanoid = civys:FindFirstChildOfClass("Humanoid")
+local Head = civys:FindFirstChild("Head")
+if Humanoid and Head and player.Character and player.Character:FindFirstChildOfClass("Tool")  then
+player.Character.HumanoidRootPart.CFrame = Head.CFrame*CFrame.new(0,-10,0)
+task.wait()
+local args = {
+	"Damage",
+	player.Character:FindFirstChildOfClass("Tool"),
+	Humanoid,
+	1000,
+	Head,
+	player.Character:FindFirstChildOfClass("Tool").Name,
+	vector.create(0, 0, 0),
+	{}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("RS_Package"):WaitForChild("Assets"):WaitForChild("Remotes"):WaitForChild("Damage"):FireServer(unpack(args))
+end
+end
+end
+task.wait()
+for _,c in pairs(game.Workspace:FindFirstChild("Bodies"):GetChildren())do
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") and (c:FindFirstChild("Torso").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+local Time = tick() + .1
+repeat
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
+StartInteractRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
+end
+task.wait()
+until c == nil or not c:FindFirstChild("Torso") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - c:FindFirstChild("Torso").Position).magnitude > 10
+if c:FindFirstChild("Torso") and c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt") then
+CompleteInteractiontRemote:FireServer(c:FindFirstChild("Torso"):FindFirstChild("SecondaryPrompt"))
+end
+task.wait(1)
+RS_Package.Remotes.ThrowBody:FireServer(vector.create(-9e999,-9e999,-9e999))
+end
+end
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("KeyCard") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-local tweenInfo = TweenInfo.new((game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.Map:FindFirstChild("KeyCard") or (game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.CFrame
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") and not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.Position+Vector3.new(0,-5,0) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame*CFrame.new(0,-5,0)}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") or (game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame*CFrame.new(0,-5,0)
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-local tweenInfo = TweenInfo.new((game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor.MainPart2.Position+Vector3.new(0,-5,0) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor.MainPart2.CFrame*CFrame.new(0,-5,0)}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked") or (game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked"):FindFirstChild("KickDoor").MainPart2.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor.MainPart2.CFrame*CFrame.new(0,-5,0)
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker2") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard").Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("prop_stadium_USBComputer1").Keyboard.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") or game.Workspace:FindFirstChild("UseUSBComputer") or game.Workspace:FindFirstChild("UsedUSBComputer")
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard").CFrame
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker1") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard").Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("prop_stadium_USBComputer2").Keyboard.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") or game.Workspace:FindFirstChild("UseUSBComputer") or game.Workspace:FindFirstChild("UsedUSBComputer")
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard").CFrame
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("UseUSBComputer") and game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard").Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("UseUSBComputer").Keyboard.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") or not game.Workspace:FindFirstChild("UseUSBComputer") or game.Workspace:FindFirstChild("UseUSBComputer").Screen.SurfaceGui.TextLabel.Text ~= "Locked" or game.Workspace:FindFirstChild("UsedUSBComputer") or (game.Workspace:FindFirstChild("UseUSBComputer").Keyboard.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard").CFrame
 elseif not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game.Workspace:FindFirstChild("UsedUSBComputer") and game.Workspace:FindFirstChild("prop_stadium_storageKeypad") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("prop_stadium_storageKeypad").Hitbox.Position+Vector3.new(0,0,5) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("prop_stadium_storageKeypad").Hitbox.CFrame*CFrame.new(0,0,5)}):Play()
-repeat task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("prop_stadium_storageKeypad") or (game.Workspace:FindFirstChild("prop_stadium_storageKeypad").Hitbox.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_storageKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,5)
 elseif not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game.Workspace:FindFirstChild("UsedUSBComputer") and game.Workspace:FindFirstChild("KeycardKeypad") and game.Workspace.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("KeycardKeypad").Hitbox.Position+Vector3.new(0,0,5) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("KeycardKeypad").Hitbox.CFrame*CFrame.new(0,0,5)}):Play()
-repeat task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("KeycardKeypad") or (game.Workspace:FindFirstChild("KeycardKeypad").Hitbox.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("KeycardKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,5)
 elseif game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Used.Value == false and game.Workspace:FindFirstChild("_") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("prop_stadium_caseOpener") or (game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.CFrame
 elseif game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook") then
 local tweenInfo = TweenInfo.new((game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
 tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").CFrame}):Play()
