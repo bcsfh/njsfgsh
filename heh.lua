@@ -1399,7 +1399,7 @@ end
 end
 task.wait()
 until nil or not game.Workspace.Bodies:FindFirstChild("DeadBody")
-task.wait(1)
+task.wait(.25)
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("KeyCard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.CFrame
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") and not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
@@ -1408,14 +1408,16 @@ elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirst
 repeat
 task.wait()
 for _,c in pairs(game.Workspace:GetChildren())do
-if c.Name == "colorBoxRNG" and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
+if c.Name == "colorBoxRNG" and game.Workspace.HighlightObjectives:FindFirstChild("RenovationArea") and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
+player.Character.HumanoidRootPart.CFrame = game.Workspace.HighlightObjectives.RenovationArea.CFrame
+task.wait(.25)
 player.Character.HumanoidRootPart.CFrame = c.serial.CFrame
-task.wait(.1)
+task.wait(.25)
 end
 end
 until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 player.Character.HumanoidRootPart.CFrame = game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor.MainPart2.CFrame
-task.wait(1)
+task.wait(.25)
 if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") and (game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 local Time = tick() + .1
 repeat
