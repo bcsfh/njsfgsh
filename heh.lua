@@ -1865,7 +1865,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Bucket") and c:FindFirstChild("Bucket"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Bucket").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1.5
+local Time = tick() + 1
 repeat
 if c:FindFirstChild("Bucket") and c:FindFirstChild("Bucket"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Bucket"):FindFirstChild("ProximityPrompt"))
