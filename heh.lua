@@ -1408,7 +1408,7 @@ VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.G, false, game)
 end
 
 noclip = true
-
+player.Character.HumanoidRootPart.Anchored = false
 game.Workspace.Gravity = 10
 
 if #trophytable >= 1 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") then
@@ -1479,39 +1479,18 @@ player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("Keycar
 elseif game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Used.Value == false and game.Workspace:FindFirstChild("_") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.CFrame
 elseif game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook") then
-local tweenInfo = TweenInfo.new((game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) 
-if player.Character.HumanoidRootPart.Position.Y < -50 then
 player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").CFrame
-end
-task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook") or (game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
 elseif game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope") then
-local tweenInfo = TweenInfo.new((game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope"):FindFirstChild("missionItem_rope").Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope"):FindFirstChild("missionItem_rope").CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) 
-if player.Character.HumanoidRootPart.Position.Y < -50 then
 player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope"):FindFirstChild("missionItem_rope").CFrame
-end
-task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope") or (game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope"):FindFirstChild("missionItem_rope").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
 elseif game.Workspace:FindFirstChild("ObjectivePickDoor1") and game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door"):FindFirstChild("Highlight_[]") or game.Workspace:FindFirstChild("ObjectivePickDoor1") and game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Rope") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Hook") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.Position+Vector3.new(0,0,-5) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5)}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") or (game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5)
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack"):FindFirstChild("Highlight_[]") or game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("OpenDoor") then
-local tweenInfo = TweenInfo.new((game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") or (game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
-wait(0.5) player.Character.HumanoidRootPart.Anchored = false
+player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(0,0,5)
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Highlight_[]") then
-local tweenInfo = TweenInfo.new((game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") or (game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
+player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(0,0,5)
+task.wait(1)
 notify("StadiumHackLaptop")
-local Time = tick() + 3.25
+local Time = tick() + 1.5
 repeat
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard:FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
@@ -1522,11 +1501,10 @@ if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") a
 CompleteInteractiontRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Highlight_[]") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("AssemblePulleyRope") or (game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.CFrame*CFrame.new(0,0,3)
+task.wait(1)
 notify("AssemblePulleyRope")
-local Time = tick() + 1.5
+local Time = tick() + 1
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -1537,11 +1515,9 @@ if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFi
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Highlight_[]") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("AssemblePulleyHook") or (game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.CFrame*CFrame.new(0,0,3)
 notify("AssemblePulleyHook")
-local Time = tick() + 1.5
+local Time = tick() + 1
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -1552,9 +1528,8 @@ if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFi
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Highlight_[]") then
-local tweenInfo = TweenInfo.new((game.Workspace:FindFirstChild("PulleyLever").Hitbox.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace:FindFirstChild("PulleyLever") or (game.Workspace:FindFirstChild("PulleyLever").Hitbox.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
+player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFrame*CFrame.new(0,0,3)
+task.wait(1)
 notify("PulleyLever")
 local Time = tick() + 1
 repeat
@@ -1567,9 +1542,6 @@ if game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChil
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("Pulley") and game.Workspace:FindFirstChild("Pulley"):FindFirstChild("GoldGuitar") then
-local tweenInfo = TweenInfo.new((game.Workspace.Pulley.GoldGuitar.missionItem_goldGuitar.Position - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.Pulley.GoldGuitar.missionItem_goldGuitar.CFrame}):Play()
-repeat  p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0) task.wait() until SG_PackageMainGui.frame_heistResults.Visible == true or not game.Workspace.Pulley:FindFirstChild("GoldGuitar") or (game.Workspace.Pulley.GoldGuitar.missionItem_goldGuitar.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10
 notify("GoldGuitar")
 repeat
 if game.Workspace.Pulley:FindFirstChild("GoldGuitar") and game.Workspace.Pulley:FindFirstChild("GoldGuitar"):FindFirstChild("missionItem_goldGuitar") then
@@ -1580,26 +1552,13 @@ task.wait()
 until not game.Workspace.Pulley:FindFirstChild("GoldGuitar")
 wait(1)
 elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and not player.Character:FindFirstChild("HAS COSTUME") then
-local tweenInfo = TweenInfo.new((Vector3.new(281,60,280) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(281,60,280)}):Play()
-p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0)
-if player.Character.HumanoidRootPart.Position.Y < 0 then
 player.Character.HumanoidRootPart.CFrame = CFrame.new(281,60,280)
-end
+RS_Package.Remotes.BecomeGuard:FireServer()
 elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1") and not player.Character:FindFirstChild("HAS COSTUME") then
-local tweenInfo = TweenInfo.new((Vector3.new(69,39,-176) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = CFrame.new(69,39,-176)}):Play()
-p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0)
-if player.Character.HumanoidRootPart.Position.Y < 0 then
 player.Character.HumanoidRootPart.CFrame = CFrame.new(69,39,-176)
-end
+RS_Package.Remotes.BecomeGuard:FireServer()
 elseif not player.Character:FindFirstChild("HAS COSTUME") and not game.Workspace:FindFirstChild("Built") then
-local tweenInfo = TweenInfo.new((game.Workspace.BagSecuredArea.FloorPart.Position+Vector3.new(0,0,5) - player.Character.HumanoidRootPart.Position).Magnitude / tweenspeed,Enum.EasingStyle.Linear,Enum.EasingDirection.In)
-tweenService:Create(player.Character.HumanoidRootPart, tweenInfo, {CFrame = game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(0,0,5)}):Play()
-p.CFrame = player.Character.HumanoidRootPart.CFrame*CFrame.new(0,-5,0)
-if player.Character.HumanoidRootPart.Position.Y < 0 then
-player.Character.HumanoidRootPart.CFrame = game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(0,0,5)
-end
+player.Character.HumanoidRootPart.Anchored = true
 elseif player.Character:FindFirstChild("HAS COSTUME") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5))
 end
