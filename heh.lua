@@ -1405,7 +1405,29 @@ player.Character.HumanoidRootPart.CFrame = game.Workspace.Map:FindFirstChild("Ke
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") and not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
+repeat
+task.wait()
+for _,c in pairs(game.Workspace:GetChildren())do
+if c.Name == "colorBoxRNG" and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
+player.Character.HumanoidRootPart.CFrame = c.serial.CFrame
+task.wait(.1)
+end
+end
+until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 player.Character.HumanoidRootPart.CFrame = game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor.MainPart2.CFrame
+task.wait(1)
+if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") and (game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
+local Time = tick() + .1
+repeat
+if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
+StartInteractRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
+end
+task.wait()
+until game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor == nil or not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2") or tick() > Time or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2").Position).magnitude > 10
+if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
+CompleteInteractiontRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
+end
+end
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard").CFrame
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker1") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard") then
