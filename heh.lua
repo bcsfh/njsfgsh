@@ -1354,7 +1354,11 @@ if string.match(lol.Name, "AI") then
 lol.NAMETAG.TextLabel.Text = "mhmhmmm this guyyyy :3"
 end
 end
-
+for _,bump in pairs(PoliceFolder:GetChildren())do
+if bump:FindFirstChild("HumanoidRootPart") and bump:FindFirstChild("HumanoidRootPart"):FindFirstChildOfClass("TouchTransmitter") then
+bump:FindFirstChild("HumanoidRootPart"):FindFirstChildOfClass("TouchTransmitter"):Destroy()
+end
+end
 for _,giggity in pairs(game.Workspace:GetDescendants())do
 if giggity.Name == "TrophyLoot_" and giggity:IsDescendantOf(game.Workspace.Map.ExcessParts) == false or giggity.Name == "TrophyLoot" and giggity:IsDescendantOf(game.Workspace.Map.ExcessParts) == false then
 table.insert(trophytable,giggity)
@@ -1454,12 +1458,11 @@ player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionIte
 elseif game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door"):FindFirstChild("Highlight_[]") or game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Rope") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Hook") then
 player.Character.HumanoidRootPart.CFrame = game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5)
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack"):FindFirstChild("Highlight_[]") or game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("OpenDoor") then
-player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(0,0,5)
+player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Highlight_[]") then
-player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(0,0,5)
-task.wait(1)
+player.Character.HumanoidRootPart.CFrame = game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame
 notify("StadiumHackLaptop")
-local Time = tick() + 1.5
+local Time = tick() + 3.25
 repeat
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard:FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
@@ -1519,7 +1522,6 @@ fireproximityprompt(game.Workspace.Pulley:FindFirstChild("GoldGuitar"):FindFirst
 end
 task.wait()
 until not game.Workspace.Pulley:FindFirstChild("GoldGuitar")
-wait(1)
 elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and not player.Character:FindFirstChild("HAS COSTUME") then
 player.Character.HumanoidRootPart.CFrame = CFrame.new(281,60,280)
 RS_Package.Remotes.BecomeGuard:FireServer()
