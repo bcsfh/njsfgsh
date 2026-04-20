@@ -1363,6 +1363,8 @@ table.insert(trophytable,giggity)
 end
 end
 
+wait(2)
+					
 while task.wait() do
 
 if SG_PackageMainGui.frame_heistResults.Visible == true then
