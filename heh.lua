@@ -1428,7 +1428,7 @@ end
 until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 repeat
 task.wait()
-player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(7.5,0,5))
+player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(-7.5,0,5))
 if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
 end
