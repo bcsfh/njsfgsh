@@ -139,7 +139,7 @@ pgr.TextColor = BrickColor.new("White")
 pgr.BackgroundColor = BrickColor.new("Really Black")
 pgr.BorderColor = BrickColor.new("Black")
 pgr.Font = "ArialBold"
-pgr.TextSize = "Size14"
+pgr.FontSize = "Size14"
 pgr.TextScaled = true
 pgr.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr.TextStrokeTransparency = 0.3
@@ -155,7 +155,7 @@ pgr2.TextColor = BrickColor.new("White")
 pgr2.BackgroundColor = BrickColor.new("Really Black")
 pgr2.BorderColor = BrickColor.new("Black")
 pgr2.Font = "ArialBold"
-pgr2.TextSize = "Size14"
+pgr2.FontSize = "Size14"
 pgr2.TextScaled = true
 pgr2.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr2.TextStrokeTransparency = 0.3
@@ -171,7 +171,7 @@ pgr3.TextColor = BrickColor.new("White")
 pgr3.BackgroundColor = BrickColor.new("Really Black")
 pgr3.BorderColor = BrickColor.new("Black")
 pgr3.Font = "ArialBold"
-pgr3.TextSize = "Size14"
+pgr3.FontSize = "Size14"
 pgr3.TextScaled = true
 pgr3.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr3.TextStrokeTransparency = 0.3
@@ -187,7 +187,7 @@ pgr4.TextColor = BrickColor.new("White")
 pgr4.BackgroundColor = BrickColor.new("Really Black")
 pgr4.BorderColor = BrickColor.new("Black")
 pgr4.Font = "ArialBold"
-pgr4.TextSize = "Size14"
+pgr4.FontSize = "Size14"
 pgr4.TextScaled = true
 pgr4.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr4.TextStrokeTransparency = 0.3
@@ -203,7 +203,7 @@ pgr5.TextColor = BrickColor.new("White")
 pgr5.BackgroundColor = BrickColor.new("Really Black")
 pgr5.BorderColor = BrickColor.new("Black")
 pgr5.Font = "ArialBold"
-pgr5.TextSize = "Size14"
+pgr5.FontSize = "Size14"
 pgr5.TextScaled = true
 pgr5.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr5.TextStrokeTransparency = 0.3
@@ -219,7 +219,7 @@ pgr6.TextColor = BrickColor.new("White")
 pgr6.BackgroundColor = BrickColor.new("Really Black")
 pgr6.BorderColor = BrickColor.new("Black")
 pgr6.Font = "ArialBold"
-pgr6.TextSize = "Size14"
+pgr6.FontSize = "Size14"
 pgr6.TextScaled = true
 pgr6.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr6.TextStrokeTransparency = 0.3
@@ -235,7 +235,7 @@ pgr7.TextColor = BrickColor.new("White")
 pgr7.BackgroundColor = BrickColor.new("Really Black")
 pgr7.BorderColor = BrickColor.new("Black")
 pgr7.Font = "ArialBold"
-pgr7.TextSize = "Size14"
+pgr7.FontSize = "Size14"
 pgr7.TextScaled = true
 pgr7.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr7.TextStrokeTransparency = 0.3
@@ -251,7 +251,7 @@ pgr8.TextColor = BrickColor.new("White")
 pgr8.BackgroundColor = BrickColor.new("Really Black")
 pgr8.BorderColor = BrickColor.new("Black")
 pgr8.Font = "ArialBold"
-pgr8.TextSize = "Size14"
+pgr8.FontSize = "Size14"
 pgr8.TextScaled = true
 pgr8.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr8.TextStrokeTransparency = 0.3
@@ -267,7 +267,7 @@ pgr9.TextColor = BrickColor.new("White")
 pgr9.BackgroundColor = BrickColor.new("Really Black")
 pgr9.BorderColor = BrickColor.new("Black")
 pgr9.Font = "ArialBold"
-pgr9.TextSize = "Size14"
+pgr9.FontSize = "Size14"
 pgr9.TextScaled = true
 pgr9.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr9.TextStrokeTransparency = 0.3
@@ -283,7 +283,7 @@ pgr10.TextColor = BrickColor.new("White")
 pgr10.BackgroundColor = BrickColor.new("Really Black")
 pgr10.BorderColor = BrickColor.new("Black")
 pgr10.Font = "ArialBold"
-pgr10.TextSize = "Size14"
+pgr10.FontSize = "Size14"
 pgr10.TextScaled = true
 pgr10.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr10.TextStrokeTransparency = 0.3
@@ -299,7 +299,7 @@ pgr11.TextColor = BrickColor.new("White")
 pgr11.BackgroundColor = BrickColor.new("Really Black")
 pgr11.BorderColor = BrickColor.new("Black")
 pgr11.Font = "ArialBold"
-pgr11.TextSize = "Size14"
+pgr11.FontSize = "Size14"
 pgr11.TextScaled = true
 pgr11.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr11.TextStrokeTransparency = 0.3
@@ -315,7 +315,7 @@ pgr12.TextColor = BrickColor.new("White")
 pgr12.BackgroundColor = BrickColor.new("Really Black")
 pgr12.BorderColor = BrickColor.new("Black")
 pgr12.Font = "ArialBold"
-pgr12.TextSize = "Size14"
+pgr12.FontSize = "Size14"
 pgr12.TextScaled = true
 pgr12.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr12.TextStrokeTransparency = 0.3
@@ -331,7 +331,7 @@ pgr13.TextColor = BrickColor.new("White")
 pgr13.BackgroundColor = BrickColor.new("Really Black")
 pgr13.BorderColor = BrickColor.new("Black")
 pgr13.Font = "ArialBold"
-pgr13.TextSize = "Size14"
+pgr13.FontSize = "Size14"
 pgr13.TextScaled = true
 pgr13.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 pgr13.TextStrokeTransparency = 0.3
@@ -347,7 +347,7 @@ creditsTo.TextColor = BrickColor.new("White")
 creditsTo.BackgroundColor = BrickColor.new("Really Black")
 creditsTo.BorderColor = BrickColor.new("Black")
 creditsTo.Font = "ArialBold"
-creditsTo.TextSize = "Size14"
+creditsTo.FontSize = "Size14"
 creditsTo.TextScaled = true
 creditsTo.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 creditsTo.TextStrokeTransparency = 0.3
@@ -378,7 +378,7 @@ cfl.TextColor = BrickColor.new("White")
 cfl.BackgroundColor = BrickColor.new("Really Black")
 cfl.BorderColor = BrickColor.new("Black")
 cfl.Font = "ArialBold"
-cfl.TextSize = "Size14"
+cfl.FontSize = "Size14"
 cfl.TextScaled = true
 cfl.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 cfl.TextStrokeTransparency = 0.3
@@ -394,7 +394,7 @@ gtm.TextColor = BrickColor.new("White")
 gtm.BackgroundColor = BrickColor.new("Really Black")
 gtm.BorderColor = BrickColor.new("Black")
 gtm.Font = "ArialBold"
-gtm.TextSize = "Size14"
+gtm.FontSize = "Size14"
 gtm.TextScaled = true
 gtm.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 gtm.TextStrokeTransparency = 0.3
@@ -410,7 +410,7 @@ clearloot.TextColor = BrickColor.new("White")
 clearloot.BackgroundColor = BrickColor.new("Really Black")
 clearloot.BorderColor = BrickColor.new("Black")
 clearloot.Font = "ArialBold"
-clearloot.TextSize = "Size14"
+clearloot.FontSize = "Size14"
 clearloot.TextScaled = true
 clearloot.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 clearloot.TextStrokeTransparency = 0.3
@@ -426,7 +426,7 @@ itemprint.TextColor = BrickColor.new("White")
 itemprint.BackgroundColor = BrickColor.new("Really Black")
 itemprint.BorderColor = BrickColor.new("Black")
 itemprint.Font = "ArialBold"
-itemprint.TextSize = "Size14"
+itemprint.FontSize = "Size14"
 itemprint.TextScaled = true
 itemprint.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 itemprint.TextStrokeTransparency = 0.3
@@ -621,7 +621,7 @@ kags.TextColor = BrickColor.new("White")
 kags.BackgroundColor = BrickColor.new("Really Black")
 kags.BorderColor = BrickColor.new("Black")
 kags.Font = "ArialBold"
-kags.TextSize = "Size14"
+kags.FontSize = "Size14"
 kags.TextScaled = true
 kags.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 kags.TextStrokeTransparency = 0.3
@@ -637,7 +637,7 @@ kags2.TextColor = BrickColor.new("White")
 kags2.BackgroundColor = BrickColor.new("Really Black")
 kags2.BorderColor = BrickColor.new("Black")
 kags2.Font = "ArialBold"
-kags2.TextSize = "Size14"
+kags2.FontSize = "Size14"
 kags2.TextScaled = true
 kags2.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 kags2.TextStrokeTransparency = 0.3
@@ -726,7 +726,7 @@ kag.TextColor = BrickColor.new("White")
 kag.BackgroundColor = BrickColor.new("Really Black")
 kag.BorderColor = BrickColor.new("Black")
 kag.Font = "ArialBold"
-kag.TextSize = "Size14"
+kag.FontSize = "Size14"
 kag.TextScaled = true
 kag.TextStrokeColor3 = Color3.new(0/0,0/0,0/0)
 kag.TextStrokeTransparency = 0.3
@@ -1650,7 +1650,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif labelbags.Name == "Bag" and labelbags:FindFirstChild("tracker") and labelbags:FindFirstChild("LastHeldBy") and labelbags:FindFirstChild("LastHeldBy").Value == player.Character then
 labelbags:FindFirstChild("tracker").TextLabel.Text = "✅ Bag"
@@ -1748,7 +1748,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not boss:FindFirstChild("Highlight") then
@@ -1793,7 +1793,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -1840,7 +1840,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -1936,7 +1936,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -1980,7 +1980,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -2123,7 +2123,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") and c:FindFirstChild("Paper") and c:FindFirstChild("Cover") and c:FindFirstChild("Cover"):FindFirstChild("FolderOpen") and c:FindFirstChild("Cover"):FindFirstChild("FolderOpen"):FindFirstChild("Main") and not c:FindFirstChild("Cover"):FindFirstChild("FolderOpen"):FindFirstChild("Main"):FindFirstChild("ProximityPrompt") and c:FindFirstChild("Paper"):FindFirstChild("SurfaceGui") and c:FindFirstChild("Paper"):FindFirstChild("SurfaceGui"):FindFirstChild("TextLabel") then
 c:FindFirstChild("tracker").TextLabel.Text = c:FindFirstChild("Paper"):FindFirstChild("SurfaceGui"):FindFirstChild("TextLabel").Text
@@ -2193,7 +2193,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = "Correct Shelf"
@@ -2266,7 +2266,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -2309,7 +2309,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -2396,7 +2396,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -2442,7 +2442,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -2470,7 +2470,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -2511,7 +2511,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -2578,7 +2578,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -2622,7 +2622,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -2666,7 +2666,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -2710,7 +2710,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 end
@@ -2791,7 +2791,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Parent.main.serial.SurfaceGui.TextLabel.Text
@@ -2845,7 +2845,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if c:FindFirstChild("colorBoxDoor") and c:FindFirstChild("colorBoxDoor"):FindFirstChild("Main") and c:FindFirstChild("colorBoxDoor"):FindFirstChild("Main"):FindFirstChild("ProximityPrompt") and c:FindFirstChild("Highlight_[]") and (c:FindFirstChild("colorBoxDoor"):FindFirstChild("Main").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
@@ -3200,7 +3200,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
@@ -3239,7 +3239,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if c:FindFirstChild("Part") and c:FindFirstChild("Part"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Part").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
@@ -3278,7 +3278,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3521,7 +3521,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3571,7 +3571,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3653,7 +3653,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3711,7 +3711,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3755,7 +3755,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3799,7 +3799,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 if not c:FindFirstChild("Highlight") then
@@ -3881,7 +3881,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 end
 elseif c.Name == "SpecialItem" and c:FindFirstChild("Top") and c:FindFirstChild("Top"):FindFirstChild("ProximityPrompt") then
@@ -3907,7 +3907,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
@@ -3958,7 +3958,7 @@ txtlbl.Position = UDim2.new(0,0,0,-35)
 txtlbl.Size = UDim2.new(1,0,10,0)
 txtlbl.TextColor3 = Color3.new(1,1,1)
 txtlbl.Font = "SourceSansBold"
-txtlbl.TextSize = "Size10"
+txtlbl.FontSize = "Size10"
 txtlbl.TextStrokeTransparency = 0.5
 elseif c:FindFirstChild("tracker") then
 c:FindFirstChild("tracker").TextLabel.Text = c.Name
