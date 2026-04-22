@@ -1419,7 +1419,7 @@ repeat
 task.wait()
 for _,c in pairs(game.Workspace:GetChildren())do
 if c.Name == "colorBoxRNG" and c:FindFirstChild("tracker") and game.Workspace.HighlightObjectives:FindFirstChild("RenovationArea") and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(c.serial.CFrame*CFrame.new(3,0,0))
+player.Character:PivotTo(c.serial.CFrame*CFrame.new(-3,0,0))
 task.wait(.25)
 end
 end
@@ -3065,7 +3065,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 2
 repeat
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt"))
@@ -3084,7 +3084,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 2
 repeat
 if c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt"))
