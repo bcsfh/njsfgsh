@@ -1526,8 +1526,6 @@ RS_Package.Remotes.BecomeGuard:FireServer()
 elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1") and not player.Character:FindFirstChild("HAS COSTUME") then
 player.Character:PivotTo(CFrame.new(69,39,-176))
 RS_Package.Remotes.BecomeGuard:FireServer()
-elseif not player.Character:FindFirstChild("HAS COSTUME") and not game.Workspace:FindFirstChild("Built") then
-player.Character.HumanoidRootPart.Anchored = true
 elseif player.Character:FindFirstChild("HAS COSTUME") then
 player.Character:PivotTo(game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5)))
 end
