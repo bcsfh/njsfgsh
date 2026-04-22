@@ -2740,7 +2740,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("InsertDrill") and c:FindFirstChild("InsertDrill"):FindFirstChild("ProximityPromptPickLock") and (c:FindFirstChild("InsertDrill").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 5
+local Time = tick() + 7.5
 repeat
 if c:FindFirstChild("InsertDrill") and c:FindFirstChild("InsertDrill"):FindFirstChild("ProximityPromptPickLock") then
 StartInteractRemote:FireServer(c:FindFirstChild("InsertDrill"):FindFirstChild("ProximityPromptPickLock"))
