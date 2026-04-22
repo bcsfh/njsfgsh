@@ -2479,7 +2479,7 @@ c:FindFirstChild("tracker").TextLabel.Text = c.Name
 end
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Lid").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 4.25
+local Time = tick() + 2.25
 repeat
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt"))
@@ -2520,7 +2520,7 @@ c:FindFirstChild("tracker").TextLabel.Text = c.Name
 end
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Lid").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 4.25
+local Time = tick() + 2.25
 repeat
 if c:FindFirstChild("Lid") and c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Lid"):FindFirstChild("ProximityPrompt"))
@@ -2592,7 +2592,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2680,7 +2680,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -2724,7 +2724,7 @@ end
 for _,colas in pairs(c:GetChildren())do
 if colas:FindFirstChild("ProximityPrompt") and (colas.Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 1.5
 repeat
 StartInteractRemote:FireServer(colas:FindFirstChild("ProximityPrompt"))
 task.wait()
@@ -3105,7 +3105,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("TakeMe") and c:FindFirstChild("TakeMe"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("TakeMe").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + .75
+local Time = tick() + 1.5
 repeat
 if c:FindFirstChild("TakeMe") and c:FindFirstChild("TakeMe"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("TakeMe"):FindFirstChild("ProximityPrompt"))
