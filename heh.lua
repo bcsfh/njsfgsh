@@ -1326,7 +1326,7 @@ end
 print("--END OF LIST--")
 end)
 
-if _G.OzelaFarm == true and string.match(game.PlaceId, "6537140247") then
+if _G.OzelaFarm == true and _G.CheatOn == true and _G.PASSCODE == "123" and whitelisted == "Yes" and string.match(game.PlaceId, "6537140247") then
 
 spawn(function()
 
@@ -1535,7 +1535,7 @@ end
 end)
 end
 
-while task.wait(0.1) do
+while task.wait(0.1) and _G.CheatOn == true and _G.PASSCODE == "123" and whitelisted == "Yes" do
 if player.Character and player.Character:FindFirstChild("Stamina") then
 player.Character:FindFirstChild("Stamina").Value = 1000
 end
