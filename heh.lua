@@ -1413,7 +1413,7 @@ until nil or not game.Workspace.Map:FindFirstChild("USB")
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("KeyCard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.CFrame)
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") and not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame*CFrame.new(-3,0,0))
+player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame*CFrame.new(-5,0,0))
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 repeat
 task.wait()
@@ -1426,7 +1426,7 @@ end
 until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 repeat
 task.wait()
-player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(0,0,-10))
+player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(5,0,5))
 if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
 end
@@ -1448,9 +1448,9 @@ player.Character:PivotTo(game.Workspace:FindFirstChild("KeycardKeypad"):FindFirs
 elseif game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Used.Value == false and game.Workspace:FindFirstChild("_") then
 player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_caseOpener").stadiumDramaticButton.Main.CFrame)
 elseif game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").CFrame*CFrame.new(0,-5,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Hooks:FindFirstChild("StageHook"):FindFirstChild("missionItem_hook").CFrame)
 elseif game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope"):FindFirstChild("missionItem_rope").CFrame*CFrame.new(0,-5,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Ropes:FindFirstChild("StageRope"):FindFirstChild("missionItem_rope").CFrame)
 elseif game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door"):FindFirstChild("Highlight_[]") or game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Rope") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Hook") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack"):FindFirstChild("Highlight_[]") or game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("OpenDoor") then
@@ -3065,7 +3065,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 3.25
+local Time = tick() + 1
 repeat
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt"))
@@ -3084,7 +3084,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 3.25
+local Time = tick() + 1
 repeat
 if c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt"))
