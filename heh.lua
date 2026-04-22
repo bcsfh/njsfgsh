@@ -1334,7 +1334,7 @@ local istrophiesclear = false
 local PlayerGuiSG_Package = player.PlayerGui:WaitForChild("SG_Package")
 local SG_PackageMainGui = PlayerGuiSG_Package:WaitForChild("MainGui")
 local trophytable = {}
-local TimeUntilReset = tick() + 180
+local TimeUntilReset = tick() + 150
 repeat task.wait() until SG_PackageMainGui:FindFirstChild("PregameFrame") and SG_PackageMainGui.PregameFrame.Visible == true or game.Workspace.Criminals:FindFirstChildOfClass("Model")
 
 if SG_PackageMainGui.PregameFrame.Visible == true then
