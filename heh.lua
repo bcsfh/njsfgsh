@@ -1334,7 +1334,7 @@ local istrophiesclear = false
 local PlayerGuiSG_Package = player.PlayerGui:WaitForChild("SG_Package")
 local SG_PackageMainGui = PlayerGuiSG_Package:WaitForChild("MainGui")
 local trophytable = {}
-
+local TimeUntilReset = tick() + 180
 repeat task.wait() until SG_PackageMainGui:FindFirstChild("PregameFrame") and SG_PackageMainGui.PregameFrame.Visible == true or game.Workspace.Criminals:FindFirstChildOfClass("Model")
 
 if SG_PackageMainGui.PregameFrame.Visible == true then
@@ -1370,6 +1370,8 @@ while task.wait() do
 if SG_PackageMainGui.frame_heistResults.Visible == true then
 game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
 elseif player.Character and player.Character.Health.Value <= 0 then
+game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
+elseif tick() > TimeUntilReset then
 game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
 end
 
@@ -1419,14 +1421,14 @@ repeat
 task.wait()
 for _,c in pairs(game.Workspace:GetChildren())do
 if c.Name == "colorBoxRNG" and c:FindFirstChild("tracker") and game.Workspace.HighlightObjectives:FindFirstChild("RenovationArea") and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(c.serial.CFrame*CFrame.new(-3,0,0))
+player.Character:PivotTo(c.serial.CFrame)
 task.wait(.25)
 end
 end
 until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 repeat
 task.wait()
-player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(5,0,5))
+player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(7.5,0,5))
 if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
 end
@@ -1472,7 +1474,7 @@ elseif game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:Fi
 player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.CFrame*CFrame.new(0,0,-2))
 task.wait(1)
 notify("AssemblePulleyRope")
-local Time = tick() + .5
+local Time = tick() + .75
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -1485,7 +1487,7 @@ end
 elseif game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Highlight_[]") then
 player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.CFrame*CFrame.new(0,0,-2))
 notify("AssemblePulleyHook")
-local Time = tick() + .5
+local Time = tick() + .75
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -1499,7 +1501,7 @@ elseif game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirst
 player.Character:PivotTo(game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFrame*CFrame.new(0,0,-2))
 task.wait(1)
 notify("PulleyLever")
-local Time = tick() + .5
+local Time = tick() + 1
 repeat
 if game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -2933,7 +2935,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + .5
+local Time = tick() + .75
 repeat
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -2952,7 +2954,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + .5
+local Time = tick() + .75
 repeat
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -2971,7 +2973,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + .5
+local Time = tick() + 1
 repeat
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
