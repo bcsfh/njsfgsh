@@ -1460,7 +1460,7 @@ player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild(
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Highlight_[]") then
 player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(3,-3,0))
 notify("StadiumHackLaptop")
-local Time = tick() + 3.25
+local Time = tick() + 3.5
 repeat
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard:FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
@@ -1474,7 +1474,7 @@ elseif game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:Fi
 player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.CFrame*CFrame.new(0,0,-2))
 task.wait(1)
 notify("AssemblePulleyRope")
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -1487,7 +1487,7 @@ end
 elseif game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Highlight_[]") then
 player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.CFrame*CFrame.new(0,0,-2))
 notify("AssemblePulleyHook")
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -1501,7 +1501,7 @@ elseif game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirst
 player.Character:PivotTo(game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFrame*CFrame.new(0,0,-2))
 task.wait(1)
 notify("PulleyLever")
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 if game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -2916,7 +2916,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Keyboard").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 3.25
+local Time = tick() + 3.5
 repeat
 if c:FindFirstChild("Keyboard") and c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
@@ -2935,7 +2935,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -2954,7 +2954,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -2973,7 +2973,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Hitbox").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 1
+local Time = tick() + 1.25
 repeat
 if c:FindFirstChild("Hitbox") and c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
@@ -3767,7 +3767,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("missionItem_rope") and c:FindFirstChild("missionItem_rope"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("missionItem_rope").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + .5
+local Time = tick() + .75
 repeat
 if c:FindFirstChild("missionItem_rope") and c:FindFirstChild("missionItem_rope"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("missionItem_rope"):FindFirstChild("ProximityPrompt"))
@@ -3811,7 +3811,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("missionItem_hook") and c:FindFirstChild("missionItem_hook"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("missionItem_hook").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + .5
+local Time = tick() + .75
 repeat
 if c:FindFirstChild("missionItem_hook") and c:FindFirstChild("missionItem_hook"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("missionItem_hook"):FindFirstChild("ProximityPrompt"))
