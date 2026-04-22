@@ -1413,7 +1413,7 @@ until nil or not game.Workspace.Map:FindFirstChild("USB")
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("KeyCard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.CFrame)
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") and not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame*CFrame.new(0,0,5))
+player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate").Backplate.CFrame*CFrame.new(0,0,-10))
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("DoorLocked") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 repeat
 task.wait()
@@ -1426,7 +1426,7 @@ end
 until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 repeat
 task.wait()
-player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(0,0,5))
+player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(0,0,-10))
 if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
 end
@@ -1436,11 +1436,11 @@ CompleteInteractiontRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindF
 end
 until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor")
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-5,0))
+player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-3,0))
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker1") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-5,0))
+player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-3,0))
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("UseUSBComputer") and game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-5,0))
+player.Character:PivotTo(game.Workspace:FindFirstChild("UseUSBComputer"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-3,0))
 elseif not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game.Workspace:FindFirstChild("UsedUSBComputer") and game.Workspace:FindFirstChild("prop_stadium_storageKeypad") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_storageKeypad"):FindFirstChild("Hitbox").CFrame*CFrame.new(0,0,3))
 elseif not game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game.Workspace:FindFirstChild("UsedUSBComputer") and game.Workspace:FindFirstChild("KeycardKeypad") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
