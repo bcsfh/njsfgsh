@@ -1357,12 +1357,13 @@ if bump:FindFirstChild("HumanoidRootPart") and bump:FindFirstChild("HumanoidRoot
 bump:FindFirstChild("HumanoidRootPart"):FindFirstChildOfClass("TouchTransmitter"):Destroy()
 end
 end
+if _G.GETTROPHIES == true then
 for _,giggity in pairs(game.Workspace:GetDescendants())do
 if giggity.Name == "TrophyLoot_" and giggity:IsDescendantOf(game.Workspace.Map.ExcessParts) == false or giggity.Name == "TrophyLoot" and giggity:IsDescendantOf(game.Workspace.Map.ExcessParts) == false then
 table.insert(trophytable,giggity)
 end
 end
-
+end
 wait(2)
 					
 while task.wait() do
