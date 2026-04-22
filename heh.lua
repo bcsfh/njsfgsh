@@ -3066,7 +3066,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 2
+local Time = tick() + 2.5
 repeat
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt"))
@@ -3085,7 +3085,7 @@ highlight.OutlineColor = Color3.fromRGB(255,170,0)
 end
 if c:FindFirstChild("Door") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") and (c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart").Position - player.Character:FindFirstChild("HumanoidRootPart").Position).magnitude < 10 then
 notify(c.Name)
-local Time = tick() + 2
+local Time = tick() + 2.5
 repeat
 if c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart") and c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt") then
 StartInteractRemote:FireServer(c:FindFirstChild("Door"):FindFirstChild("DoorOpenPart"):FindFirstChild("ProximityPrompt"))
