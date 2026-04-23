@@ -966,10 +966,13 @@ player.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Landed")
 end
 end)
 
-game:GetService("RunService").Stepped:connect(function()
-if player.Character:FindFirstChildOfClass("Humanoid") then 
-if player.Character:FindFirstChild("DownGui") or player.Character:FindFirstChild("DownHighlight") then
-player.Character:FindFirstChildOfClass("Humanoid").WalkSpeed = 60
+game:GetService("RunService").RenderStepped:connect(function()
+if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then 
+local pp = player.Character:GetAttributes()
+for pootis,value in pairs(pp)do
+if string.match(pootis,"Downed") or string.match(pootis,"InCustody") or string.match(pootis,"Incapacitated") or string.match(pootis,"Teleporting") or string.match(pootis,"CustodyPosition") or string.match(pootis,"JumpDisabled") then
+player.Character:SetAttribute(pootis,false)
+end
 end
 end
 if noclip == true then
