@@ -124,6 +124,7 @@ local infammo = false
 local noclip = false
 local throwbags = false
 local throwbodies = false
+local holdingbody = false
 local caught = false
 local checkingforloot = true
 local currentbags = 0
@@ -1343,9 +1344,14 @@ end
 
 repeat task.wait() until game.Workspace.Criminals:FindFirstChildOfClass("Model")
 
-if game.Workspace.Criminals:FindFirstChildOfClass("Model") and player.Character:FindFirstChild("Mask") then
+repeat
+task.wait()
+if player.Character and player.Character:FindFirstChild("Mask") then
 VirtualInputManager:SendKeyEvent(true, Enum.KeyCode.G, false, game)
+game:GetService("ReplicatedStorage").RS_Package.Assets.Remotes.MaskOn:FireServer()	
+game:GetService("ReplicatedStorage").RS_Package.Assets.Remotes.MaskOn:FireServer(true,"Secondary")					
 end
+until not player.Character:FindFirstChild("Mask")
 
 for _,lol in pairs(game.Workspace.Criminals:GetChildren())do
 if string.match(lol.Name, "AI") then
@@ -1573,6 +1579,7 @@ end
 end
 
 currentbags = 0
+holdingbody = false
 
 for equip,ment in pairs(game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:GetChildren())do
 if ment.Name == "Crowbar" and ment.Value == player then
@@ -1592,6 +1599,9 @@ hasSnow = true
 end
 if ment.Name == "Key" and ment.Value == player then
 hasdepotkey = true
+end
+if ment.Name == "Dead Body" and ment.Value == player then
+holdingbody = true
 end
 if ment.Name == "Loot Bag" and ment.Value == player then
 currentbags = currentbags+1
@@ -1678,7 +1688,7 @@ end
 end
 end
 
-if throwbodies == true and caught == false and game.Workspace:FindFirstChild("Bodies") then
+if throwbodies == true and caught == false and holdingbody == false then
 for _,civys in pairs(CivilliansFolder:GetChildren())do
 local Humanoid = civys:FindFirstChildOfClass("Humanoid")
 local Head = civys:FindFirstChild("Head")
