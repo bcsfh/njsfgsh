@@ -969,7 +969,7 @@ game:GetService("RunService").RenderStepped:connect(function()
 if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then 
 local pp = player.Character:GetAttributes()
 for pootis,value in pairs(pp)do
-if string.match(pootis,"Downed") or string.match(pootis,"InCustody") or string.match(pootis,"Incapacitated") or string.match(pootis,"Teleporting") or string.match(pootis,"CustodyPosition") or string.match(pootis,"JumpDisabled") then
+if string.match(pootis,"Downed") or string.match(pootis,"InCustody") or string.match(pootis,"Incapacitated") or string.match(pootis,"Teleporting") or string.match(pootis,"CustodyPosition") or string.match(pootis,"JumpDisabled") or string.match(pootis,"BeingTazed") then
 player.Character:SetAttribute(pootis,false)
 end
 end
