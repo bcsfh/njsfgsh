@@ -961,8 +961,7 @@ end)
 
 player.Character:FindFirstChildOfClass("Humanoid").StateChanged:Connect(function(_oldState, newState)
 if newState == Enum.HumanoidStateType.Freefall then
-task.wait(0.1)
-player.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Landed")
+player.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Swimming")
 end
 end)
 
