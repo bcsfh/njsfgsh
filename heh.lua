@@ -1430,7 +1430,7 @@ repeat
 task.wait()
 for _,c in pairs(game.Workspace:GetChildren())do
 if c.Name == "colorBoxRNG" and c:FindFirstChild("tracker") and game.Workspace.HighlightObjectives:FindFirstChild("RenovationArea") and not game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(c.serial.CFrame)
+player.Character:PivotTo(c.serial.CFrame*CFrame.new(0,-5,0))
 task.wait(.25)
 end
 end
@@ -1465,13 +1465,13 @@ player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Ropes:FindFirst
 elseif game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door"):FindFirstChild("Highlight_[]") or game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Rope") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Hook") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack"):FindFirstChild("Highlight_[]") or game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("OpenDoor") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(0,-4,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(0,-3,0))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Highlight_[]") then
 notify("StadiumHackLaptop")
 local Time = tick() + 3.5
 repeat
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard:FindFirstChild("ProximityPrompt") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(0,-4,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(0,-3,0))
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
