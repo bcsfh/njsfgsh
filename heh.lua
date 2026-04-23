@@ -965,7 +965,7 @@ player.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Swimming")
 end
 end)
 
-game:GetService("RunService").RenderStepped:connect(function()
+game:GetService("RunService").Stepped:connect(function()
 if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then 
 local pp = player.Character:GetAttributes()
 for pootis,value in pairs(pp)do
