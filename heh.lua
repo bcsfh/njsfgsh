@@ -1465,13 +1465,13 @@ player.Character:PivotTo(game.Workspace.mapEntities.missionItems.Ropes:FindFirst
 elseif game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door"):FindFirstChild("Highlight_[]") or game.Workspace.Map:FindFirstChild("ObjectivePickDoor1") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Rope") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Hook") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("Door").DoorOpenPart.CFrame*CFrame.new(0,0,-5))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack"):FindFirstChild("Highlight_[]") or game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack") and game.Workspace.Map:FindFirstChild("ObjectivePickDoor1"):FindFirstChild("OpenDoor") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(3,-3,0))
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("missionItem_laptopHack").Keyboard.CFrame*CFrame.new(0,-4,0))
 elseif game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(3,-3,0))
 notify("StadiumHackLaptop")
 local Time = tick() + 3.5
 repeat
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard:FindFirstChild("ProximityPrompt") then
+player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop").Keyboard.CFrame*CFrame.new(0,-4,0))
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
@@ -1480,12 +1480,11 @@ if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") a
 CompleteInteractiontRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.CFrame*CFrame.new(0,0,-2))
-task.wait(1)
 notify("AssemblePulleyRope")
 local Time = tick() + 1.25
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
+player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyRope").Hitbox.CFrame*CFrame.new(0,0,-2))
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
@@ -1494,11 +1493,11 @@ if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFi
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.CFrame*CFrame.new(0,0,-2))
 notify("AssemblePulleyHook")
 local Time = tick() + 1.25
 repeat
 if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
+player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyHook").Hitbox.CFrame*CFrame.new(0,0,-2))
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
@@ -1507,12 +1506,11 @@ if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFi
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 elseif game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Highlight_[]") then
-player.Character:PivotTo(game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFrame*CFrame.new(0,0,-2))
-task.wait(1)
 notify("PulleyLever")
 local Time = tick() + 1.25
 repeat
 if game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
+player.Character:PivotTo(game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFrame*CFrame.new(0,0,-2))
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
@@ -1536,7 +1534,7 @@ elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuita
 player.Character:PivotTo(CFrame.new(69,39,-176))
 RS_Package.Remotes.BecomeGuard:FireServer()
 elseif player.Character:FindFirstChild("HAS COSTUME") then
-player.Character:PivotTo(game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(math.random(-2,2),math.random(-2,2),math.random(-2,2)))
+player.Character:PivotTo(game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(math.random(-2,2),math.random(0,2),math.random(-2,2)))
 end
 end
 end)
