@@ -1536,7 +1536,7 @@ elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuita
 player.Character:PivotTo(CFrame.new(69,39,-176))
 RS_Package.Remotes.BecomeGuard:FireServer()
 elseif player.Character:FindFirstChild("HAS COSTUME") then
-player.Character:PivotTo(game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(math.random(-5,5),math.random(-5,5),math.random(-5,5)))
+player.Character:PivotTo(game.Workspace.BagSecuredArea.FloorPart.CFrame*CFrame.new(math.random(-2,2),math.random(-2,2),math.random(-2,2)))
 end
 end
 end)
