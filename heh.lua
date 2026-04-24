@@ -1426,7 +1426,7 @@ task.wait()
 if game.Workspace.Map:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("USB"):FindFirstChild("Hitbox") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("USB"):FindFirstChild("Hitbox").CFrame)
 end
-until nil or not game.Workspace.Map:FindFirstChild("USB") or tick() > TimeUntilReset
+until nil or not game.Workspace.Map:FindFirstChild("USB") or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace.Map:FindFirstChild("KeyCard") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
 player.Character:PivotTo(game.Workspace.Map:FindFirstChild("KeyCard").InteractionPart.CFrame)
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("rfid_faceplate") and not game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") then
@@ -1440,7 +1440,7 @@ player.Character:PivotTo(c.serial.CFrame*CFrame.new(0,-5,0))
 task.wait(.25)
 end
 end
-until nil or not game.Workspace.Map:FindFirstChild("RFIDObjectiveDoor") or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") or tick() > TimeUntilReset
+until nil or not game.Workspace.Map:FindFirstChild("RFIDObjectiveDoor") or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]") or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0
 repeat
 task.wait()
 player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(-7.5,0,5))
@@ -1451,7 +1451,7 @@ task.wait(.1)
 if game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt") then
 CompleteInteractiontRemote:FireServer(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor:FindFirstChild("MainPart2"):FindFirstChild("ProximityPrompt"))
 end
-until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") or tick() > TimeUntilReset
+until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker2") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1") and game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard") then
 player.Character:PivotTo(game.Workspace:FindFirstChild("prop_stadium_USBComputer1"):FindFirstChild("Keyboard").CFrame*CFrame.new(0,-3,0))
 elseif game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("Key Card") and game:GetService("ReplicatedStorage").ReplicatedMissionEquipment:FindFirstChild("USB") and game.Workspace:FindFirstChild("GuardLocker1") and game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("OpenDoor") and game.Workspace:FindFirstChild("prop_stadium_cardReader"):FindFirstChild("OpenedRFID") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2"):FindFirstChild("Keyboard") then
@@ -1481,7 +1481,7 @@ player.Character:PivotTo(game.Workspace.mapEntities.missionItems:FindFirstChild(
 StartInteractRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
-until nil or not game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") or tick() > Time or tick() > TimeUntilReset or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard").Position).magnitude > 10
+until nil or not game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") or tick() > Time or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0 or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard").Position).magnitude > 10
 if game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop") and game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt") then
 CompleteInteractiontRemote:FireServer(game.Workspace.mapEntities.missionItems:FindFirstChild("StadiumHackLaptop"):FindFirstChild("Keyboard"):FindFirstChild("ProximityPrompt"))
 end
@@ -1494,7 +1494,7 @@ player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyRope").Hit
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
-until nil or not game.Workspace:FindFirstChild("AssemblePulleyRope") or tick() > Time or tick() > TimeUntilReset or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox").Position).magnitude > 10
+until nil or not game.Workspace:FindFirstChild("AssemblePulleyRope") or tick() > Time or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0 or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox").Position).magnitude > 10
 if game.Workspace:FindFirstChild("AssemblePulleyRope") and game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyRope"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
@@ -1507,7 +1507,7 @@ player.Character:PivotTo(game.Workspace:FindFirstChild("AssemblePulleyHook").Hit
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
-until nil or not game.Workspace:FindFirstChild("AssemblePulleyHook") or tick() > Time or tick() > TimeUntilReset or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox").Position).magnitude > 10
+until nil or not game.Workspace:FindFirstChild("AssemblePulleyHook") or tick() > Time or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0 or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox").Position).magnitude > 10
 if game.Workspace:FindFirstChild("AssemblePulleyHook") and game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("AssemblePulleyHook"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
@@ -1520,7 +1520,7 @@ player.Character:PivotTo(game.Workspace:FindFirstChild("PulleyLever").Hitbox.CFr
 StartInteractRemote:FireServer(game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
 task.wait()
-until nil or not game.Workspace:FindFirstChild("PulleyLever") or tick() > Time or tick() > TimeUntilReset or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox").Position).magnitude > 10
+until nil or not game.Workspace:FindFirstChild("PulleyLever") or tick() > Time or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0 or (player.Character:FindFirstChild("HumanoidRootPart").Position - game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox").Position).magnitude > 10
 if game.Workspace:FindFirstChild("PulleyLever") and game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt") then
 CompleteInteractiontRemote:FireServer(game.Workspace:FindFirstChild("PulleyLever"):FindFirstChild("Hitbox"):FindFirstChild("ProximityPrompt"))
 end
@@ -1532,7 +1532,7 @@ player.Character:PivotTo(game.Workspace.Pulley.hook["Meshes/piratehook"].CFrame*
 fireproximityprompt(game.Workspace.Pulley:FindFirstChild("GoldGuitar"):FindFirstChild("missionItem_goldGuitar").ProximityPrompt,5,true)
 end
 task.wait()
-until nil or not game.Workspace.Pulley:FindFirstChild("GoldGuitar") or tick() > TimeUntilReset
+until nil or not game.Workspace.Pulley:FindFirstChild("GoldGuitar") or tick() > TimeUntilReset or SG_PackageMainGui.frame_heistResults.Visible == true or player.Character.Health.Value <= 0
 elseif #trophytable == 0 and not game.Workspace.Pulley:FindFirstChild("GoldGuitar") and not game.Workspace.Pulley:FindFirstChild("GoldGuitar_Invisible") and game.Workspace:FindFirstChild("Built") and game.Workspace:FindFirstChild("prop_stadium_USBComputer2") and not player.Character:FindFirstChild("HAS COSTUME") then
 player.Character:PivotTo(CFrame.new(281,60,280))
 RS_Package.Remotes.BecomeGuard:FireServer()
