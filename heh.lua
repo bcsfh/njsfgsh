@@ -1337,6 +1337,7 @@ local istrophiesclear = false
 local PlayerGuiSG_Package = player.PlayerGui:WaitForChild("SG_Package")
 local SG_PackageMainGui = PlayerGuiSG_Package:WaitForChild("MainGui")
 local trophytable = {}
+local VotedForReset = false
 local TimeUntilReset = tick() + 150
 repeat task.wait() until SG_PackageMainGui:FindFirstChild("PregameFrame") and SG_PackageMainGui.PregameFrame.Visible == true or game.Workspace.Criminals:FindFirstChildOfClass("Model")
 
@@ -1376,12 +1377,17 @@ wait(2)
 					
 while task.wait() do
 
+if VotedForReset == false then
 if SG_PackageMainGui.frame_heistResults.Visible == true then
 game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
+VotedForReset = true
 elseif player.Character and player.Character.Health.Value <= 0 then
 game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
+VotedForReset = true
 elseif tick() > TimeUntilReset then
 game:GetService("ReplicatedStorage").RS_Package.Remotes.VoteReset:FireServer()
+VotedForReset = true
+end
 end
 
 throwbodies = true
@@ -1434,7 +1440,7 @@ player.Character:PivotTo(c.serial.CFrame*CFrame.new(0,-5,0))
 task.wait(.25)
 end
 end
-until nil or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
+until nil or not game.Workspace.Map:FindFirstChild("RFIDObjectiveDoor") or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door") or game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Highlight_[]")
 repeat
 task.wait()
 player.Character:PivotTo(game.Workspace.Map.RFIDObjectiveDoor:FindFirstChild("Door").KickDoor.MainPart2.CFrame*CFrame.new(-7.5,0,5))
